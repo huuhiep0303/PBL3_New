@@ -34,6 +34,14 @@
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.work_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -59,14 +67,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.work_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button21 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel7.SuspendLayout();
@@ -77,6 +79,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.button21);
+            this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.button20);
             this.panel3.Controls.Add(this.button19);
             this.panel3.Controls.Add(this.button18);
@@ -92,7 +96,7 @@
             // 
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(979, 81);
+            this.button20.Location = new System.Drawing.Point(763, 81);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(109, 53);
             this.button20.TabIndex = 6;
@@ -103,7 +107,7 @@
             // 
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.Location = new System.Drawing.Point(852, 81);
+            this.button19.Location = new System.Drawing.Point(636, 81);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(109, 53);
             this.button19.TabIndex = 5;
@@ -114,7 +118,7 @@
             // 
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.Location = new System.Drawing.Point(726, 81);
+            this.button18.Location = new System.Drawing.Point(510, 81);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(109, 53);
             this.button18.TabIndex = 4;
@@ -127,7 +131,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.Name,
+            this._Name,
             this.position,
             this.work_status,
             this.gender,
@@ -141,6 +145,54 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1021, 496);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            // 
+            // Name
+            // 
+            this._Name.HeaderText = "Khách hàng";
+            this._Name.MinimumWidth = 6;
+            this._Name.Name = "Name";
+            // 
+            // position
+            // 
+            this.position.HeaderText = "Sản phẩm";
+            this.position.MinimumWidth = 6;
+            this.position.Name = "position";
+            // 
+            // work_status
+            // 
+            this.work_status.HeaderText = "Mô tả";
+            this.work_status.MinimumWidth = 6;
+            this.work_status.Name = "work_status";
+            // 
+            // gender
+            // 
+            this.gender.HeaderText = "Ngày đặt";
+            this.gender.MinimumWidth = 6;
+            this.gender.Name = "gender";
+            // 
+            // phone
+            // 
+            this.phone.HeaderText = "Số lượng";
+            this.phone.MinimumWidth = 6;
+            this.phone.Name = "phone";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Loại hàng";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // salary
+            // 
+            this.salary.HeaderText = "Tổng giá";
+            this.salary.MinimumWidth = 6;
+            this.salary.Name = "salary";
             // 
             // guna2TextBox2
             // 
@@ -475,53 +527,29 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(528, 51);
             this.guna2TextBox1.TabIndex = 3;
             // 
-            // ID
+            // button21
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.Location = new System.Drawing.Point(1056, 85);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(65, 49);
+            this.button21.TabIndex = 11;
+            this.button21.Text = "OK";
+            this.button21.UseVisualStyleBackColor = true;
             // 
-            // Name
+            // comboBox1
             // 
-            this.Name.HeaderText = "Khách hàng";
-            this.Name.MinimumWidth = 6;
-            this.Name.Name = "Name";
-            // 
-            // position
-            // 
-            this.position.HeaderText = "Sản phẩm";
-            this.position.MinimumWidth = 6;
-            this.position.Name = "position";
-            // 
-            // work_status
-            // 
-            this.work_status.HeaderText = "Mô tả";
-            this.work_status.MinimumWidth = 6;
-            this.work_status.Name = "work_status";
-            // 
-            // gender
-            // 
-            this.gender.HeaderText = "Ngày đặt";
-            this.gender.MinimumWidth = 6;
-            this.gender.Name = "gender";
-            // 
-            // phone
-            // 
-            this.phone.HeaderText = "Số lượng";
-            this.phone.MinimumWidth = 6;
-            this.phone.Name = "phone";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Loại hàng";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // salary
-            // 
-            this.salary.HeaderText = "Tổng giá";
-            this.salary.MinimumWidth = 6;
-            this.salary.Name = "salary";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Sắp xếp theo ID",
+            "Sắp xếp theo ngày đặt",
+            "Sắp xếp theo số lượng",
+            "Sắp xếp theo giá"});
+            this.comboBox1.Location = new System.Drawing.Point(896, 99);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(142, 24);
+            this.comboBox1.TabIndex = 10;
             // 
             // FormOrderOfAdmin
             // 
@@ -578,12 +606,15 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn position;
         private System.Windows.Forms.DataGridViewTextBoxColumn work_status;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn salary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _Name;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

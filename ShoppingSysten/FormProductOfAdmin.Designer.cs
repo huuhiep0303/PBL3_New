@@ -53,20 +53,22 @@
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.work_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button21 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -379,6 +381,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.button21);
+            this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.button20);
             this.panel3.Controls.Add(this.button19);
             this.panel3.Controls.Add(this.button18);
@@ -391,11 +395,44 @@
             this.panel3.Size = new System.Drawing.Size(1165, 696);
             this.panel3.TabIndex = 26;
             // 
+            // button20
+            // 
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.Location = new System.Drawing.Point(793, 81);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(109, 53);
+            this.button20.TabIndex = 6;
+            this.button20.Text = "Xóa tất cả";
+            this.button20.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.Location = new System.Drawing.Point(666, 81);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(109, 53);
+            this.button19.TabIndex = 5;
+            this.button19.Text = "Sửa sản phẩm";
+            this.button19.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.Location = new System.Drawing.Point(540, 81);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(109, 53);
+            this.button18.TabIndex = 4;
+            this.button18.Text = "Xóa sản phẩm";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
             // button17
             // 
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(599, 81);
+            this.button17.Location = new System.Drawing.Point(413, 81);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(109, 53);
             this.button17.TabIndex = 3;
@@ -408,7 +445,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.NameColumn,
+            this.Namee,
             this.position,
             this.gender,
             this.phone,
@@ -421,6 +458,48 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1021, 496);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            // 
+            // Name
+            // 
+            this.Namee.HeaderText = "Tên sản phẩm";
+            this.Namee.MinimumWidth = 6;
+            this.Namee.Name = "Name";
+            // 
+            // position
+            // 
+            this.position.HeaderText = "Nhà cung cấp";
+            this.position.MinimumWidth = 6;
+            this.position.Name = "position";
+            // 
+            // gender
+            // 
+            this.gender.HeaderText = "Mô tả";
+            this.gender.MinimumWidth = 6;
+            this.gender.Name = "gender";
+            // 
+            // phone
+            // 
+            this.phone.HeaderText = "Loại sản phẩm";
+            this.phone.MinimumWidth = 6;
+            this.phone.Name = "phone";
+            // 
+            // work_status
+            // 
+            this.work_status.HeaderText = "Số lượng còn";
+            this.work_status.MinimumWidth = 6;
+            this.work_status.Name = "work_status";
+            // 
+            // salary
+            // 
+            this.salary.HeaderText = "Giá ";
+            this.salary.MinimumWidth = 6;
+            this.salary.Name = "salary";
             // 
             // guna2TextBox2
             // 
@@ -453,80 +532,29 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Danh sách sản phẩm";
             // 
-            // ID
+            // button21
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.Location = new System.Drawing.Point(1083, 85);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(65, 49);
+            this.button21.TabIndex = 9;
+            this.button21.Text = "OK";
+            this.button21.UseVisualStyleBackColor = true;
             // 
-            // Name
+            // comboBox1
             // 
-            this.NameColumn.HeaderText = "Tên sản phẩm";
-            this.NameColumn.MinimumWidth = 6;
-            this.NameColumn.Name = "Name";
-            // 
-            // position
-            // 
-            this.position.HeaderText = "Nhà cung cấp";
-            this.position.MinimumWidth = 6;
-            this.position.Name = "position";
-            // 
-            // gender
-            // 
-            this.gender.HeaderText = "Mô tả";
-            this.gender.MinimumWidth = 6;
-            this.gender.Name = "gender";
-            // 
-            // phone
-            // 
-            this.phone.HeaderText = "Loại sản phẩm";
-            this.phone.MinimumWidth = 6;
-            this.phone.Name = "phone";
-            // 
-            // work_status
-            // 
-            this.work_status.HeaderText = "Số lượng còn";
-            this.work_status.MinimumWidth = 6;
-            this.work_status.Name = "work_status";
-            // 
-            // salary
-            // 
-            this.salary.HeaderText = "Giá ";
-            this.salary.MinimumWidth = 6;
-            this.salary.Name = "salary";
-            // 
-            // button18
-            // 
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.Location = new System.Drawing.Point(726, 81);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(109, 53);
-            this.button18.TabIndex = 4;
-            this.button18.Text = "Xóa sản phẩm";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.Location = new System.Drawing.Point(852, 81);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(109, 53);
-            this.button19.TabIndex = 5;
-            this.button19.Text = "Sửa sản phẩm";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(979, 81);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(109, 53);
-            this.button20.TabIndex = 6;
-            this.button20.Text = "Xóa tất cả";
-            this.button20.UseVisualStyleBackColor = true;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Sắp xếp theo ID",
+            "Sắp xếp theo tên",
+            "Sắp xếp theo giá",
+            "Sắp xếp theo số lượng còn lại"});
+            this.comboBox1.Location = new System.Drawing.Point(923, 99);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(142, 24);
+            this.comboBox1.TabIndex = 8;
             // 
             // FormProductOfAdmin
             // 
@@ -589,5 +617,9 @@
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _Name;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Namee;
     }
 }
