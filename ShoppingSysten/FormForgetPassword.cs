@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ShoppingSysten
 {
-    public partial class FormProduct: Form
+    public partial class FormForgetPassword: Form
     {
-        public FormProduct()
+        public FormForgetPassword()
         {
             InitializeComponent();
         }

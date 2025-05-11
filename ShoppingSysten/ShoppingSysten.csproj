@@ -52,6 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCustomerOfAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerOfAdmin.Designer.cs">
+      <DependentUpon>FormCustomerOfAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormForgetPassword.Designer.cs">
+      <DependentUpon>FormForgetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +88,23 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProduct.cs">
+    <Compile Include="FormOrderOfAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProduct.Designer.cs">
-      <DependentUpon>FormProduct.cs</DependentUpon>
+    <Compile Include="FormOrderOfAdmin.Designer.cs">
+      <DependentUpon>FormOrderOfAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductOfAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductOfAdmin.Designer.cs">
+      <DependentUpon>FormProductOfAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportOfAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportOfAdmin.Designer.cs">
+      <DependentUpon>FormReportOfAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSignup.cs">
       <SubType>Form</SubType>
@@ -90,6 +114,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCustomerOfAdmin.resx">
+      <DependentUpon>FormCustomerOfAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormForgetPassword.resx">
+      <DependentUpon>FormForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,8 +132,14 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProduct.resx">
-      <DependentUpon>FormProduct.cs</DependentUpon>
+    <EmbeddedResource Include="FormOrderOfAdmin.resx">
+      <DependentUpon>FormOrderOfAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductOfAdmin.resx">
+      <DependentUpon>FormProductOfAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportOfAdmin.resx">
+      <DependentUpon>FormReportOfAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSignup.resx">
       <DependentUpon>FormSignup.cs</DependentUpon>

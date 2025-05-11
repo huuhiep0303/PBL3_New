@@ -55,7 +55,7 @@
             this.button17 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employee_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +65,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -349,6 +350,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.button19);
             this.panel3.Controls.Add(this.button18);
             this.panel3.Controls.Add(this.button17);
             this.panel3.Controls.Add(this.dataGridView1);
@@ -363,7 +365,7 @@
             // 
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.Location = new System.Drawing.Point(937, 78);
+            this.button18.Location = new System.Drawing.Point(746, 78);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(151, 49);
             this.button18.TabIndex = 4;
@@ -374,7 +376,7 @@
             // 
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(752, 78);
+            this.button17.Location = new System.Drawing.Point(557, 78);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(151, 49);
             this.button17.TabIndex = 3;
@@ -387,7 +389,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.employee_name,
+            this.NameColumn,
             this.position,
             this.gender,
             this.phone,
@@ -409,9 +411,9 @@
             // 
             // Name
             // 
-            this.employee_name.HeaderText = "Tên nhân viên";
-            this.employee_name.MinimumWidth = 6;
-            this.employee_name.Name = "Name";
+            this.NameColumn.HeaderText = "Tên nhân viên";
+            this.NameColumn.MinimumWidth = 6;
+            this.NameColumn.Name = "Name";
             // 
             // position
             // 
@@ -502,6 +504,17 @@
             this.button1.Text = "AD";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // button19
+            // 
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.Location = new System.Drawing.Point(937, 78);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(151, 49);
+            this.button19.TabIndex = 5;
+            this.button19.Text = "Sửa thông tin";
+            this.button19.UseVisualStyleBackColor = true;
+            // 
             // FormEmployeeOfAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -562,5 +575,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameColumn;
+        private System.Windows.Forms.Button button19;
     }
 }
