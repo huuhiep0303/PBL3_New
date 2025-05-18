@@ -37,6 +37,7 @@
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
@@ -52,6 +53,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\categoryManagement.cs" />
+    <Compile Include="BLL\InventoryHistoryManagement.cs" />
+    <Compile Include="BLL\InventoryManagement.cs" />
+    <Compile Include="BLL\OrderManagement.cs" />
+    <Compile Include="BLL\PaymentMangement.cs" />
+    <Compile Include="BLL\productManegement.cs" />
+    <Compile Include="BLL\RequestManagement.cs" />
+    <Compile Include="Entity class\category.cs" />
+    <Compile Include="Entity class\client.cs" />
+    <Compile Include="Entity class\employeeObject.cs" />
+    <Compile Include="Entity class\humanFeature.cs" />
+    <Compile Include="Entity class\Inventory.cs" />
+    <Compile Include="Entity class\InventoryTransaction.cs" />
+    <Compile Include="Entity class\Order.cs" />
+    <Compile Include="Entity class\OrderItem.cs" />
+    <Compile Include="Entity class\Payment.cs" />
+    <Compile Include="Entity class\product.cs" />
+    <Compile Include="Entity class\ReturnRequest.cs" />
+    <Compile Include="Entity class\ShoppingCart.cs" />
+    <Compile Include="Entity class\ShoppingCartItem.cs" />
     <Compile Include="FormCustomerOfAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +127,14 @@
     <Compile Include="FormSignup.Designer.cs">
       <DependentUpon>FormSignup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\ICategoryManagement.cs" />
+    <Compile Include="Interface\IHumanFeature.cs" />
+    <Compile Include="Interface\IInventoryHistory.cs" />
+    <Compile Include="Interface\IInventoryManagement.cs" />
+    <Compile Include="Interface\IOrderManagement.cs" />
+    <Compile Include="Interface\IPaymentManagement.cs" />
+    <Compile Include="Interface\IProductManagement.cs" />
+    <Compile Include="Interface\IRequestManagement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCustomerOfAdmin.resx">
