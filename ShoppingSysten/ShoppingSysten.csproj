@@ -128,7 +128,6 @@
       <DependentUpon>FormSignup.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface\ICategoryManagement.cs" />
-    <Compile Include="Interface\IHumanFeature.cs" />
     <Compile Include="Interface\IInventoryHistory.cs" />
     <Compile Include="Interface\IInventoryManagement.cs" />
     <Compile Include="Interface\IOrderManagement.cs" />

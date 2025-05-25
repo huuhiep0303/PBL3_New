@@ -28,9 +28,10 @@ namespace pbl.Manager.BLL
             }
             else
             {
-                
+                //thêm hoá đơn vào cơ sở dữ liệu
+                _bills.Add(bill);
+                return await Task.FromResult(true);
             }
-            return await Task.FromResult(true);
         }
 
         public async Task<Bill> GetBillById(int id)
