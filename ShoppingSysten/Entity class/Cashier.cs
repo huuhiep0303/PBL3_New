@@ -8,9 +8,12 @@ namespace pbl.Manager.Entity
 {
     public class Cashier : EmployeeObject
     {
-        protected List<Payment> BillList;
+        protected List<Bill> BillList;
         protected List<double> TotalPriceList;
-        protected List<DateTime> BillDateList;
-
+        public Cashier()
+        {
+            BillList = new List<Bill>();
+            TotalPriceList = new List<double>();
+        }
     }
 }

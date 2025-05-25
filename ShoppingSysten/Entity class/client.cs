@@ -1,6 +1,7 @@
 ﻿using humanFeature;
 using System;
 using System.Collections.Generic;
+using inforProduct;
 //cập nhật list của mỗi đối tượng sau mỗi lần cập nhật trên API.
 // Mỗi lần tính tiền thì lấy một mảng tạm thời để đem ra tính.
 //Lấy biến tạm để lấy dữ liệu từ cơ sở dữ liệu
