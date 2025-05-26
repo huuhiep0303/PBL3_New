@@ -1,13 +1,12 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace pbl.entity_class
+namespace entity_class
 {
     public enum PaymentStatus { Pending, Completed, Failed, Canceled}
     public enum PaymentMethod { CreditCart, BankTransfer, Wallet, Cash}
     internal class Payment
     {
-        [Key]
         public int paymentId {  get; set; }
         public int orderId { get; set; }
         public decimal amount { get; set; }

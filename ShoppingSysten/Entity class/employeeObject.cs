@@ -1,9 +1,8 @@
-using humanFeature;
-using inforProduct;
+
 using System;
 using System.Collections.Generic;   
 
-namespace Employee
+namespace entity_class
 {
     public class Employee : human
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+//using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace pbl.entity_class
+namespace entity_class
 {
     public enum RequestStatus { Approved, Pending, Rejected}
     internal class ReturnRequest
@@ -18,7 +18,7 @@ namespace pbl.entity_class
         public DateTime RequestAt {  get; private set; }
         public DateTime ProcessAt { get; private set; }
         public RequestStatus Status { get; set; }
-        public List<string> ImagePaths { get; } = new();
+        public List<string> ImagePaths { get; } = new List<string>();
         public ReturnRequest(int orderId, int productId, int quantity, string reason, IEnumerable<string> imagePaths
              ) //
         {

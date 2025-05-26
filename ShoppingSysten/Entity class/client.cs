@@ -1,66 +1,23 @@
-﻿using humanFeature;
+﻿
 using System;
 using System.Collections.Generic;
-using inforProduct;
+using entity_class;
 //cập nhật list của mỗi đối tượng sau mỗi lần cập nhật trên API.
 // Mỗi lần tính tiền thì lấy một mảng tạm thời để đem ra tính.
 //Lấy biến tạm để lấy dữ liệu từ cơ sở dữ liệu
-namespace client
+namespace entity_class
 {
-    public class client : human
+    public class Customer : human
     {
-        protected List<string> productList;
-        protected List<double> price;
-        protected List<int> quantity;
-
-        public client()
+        public int CustomerId { get; set; }
+        public List<Order> Orders { get; set; }
+        public Customer()
         {
-            this.productList = new List<string>();
-            this.price = new List<double>();
-            this.quantity = new List<int>();
+            Orders = new List<Order>();
+            
         }
 
-        public client(List<string> productList, List<double> price, List<int> quantity)
-        {
-            this.productList = productList;
-            this.price = price;
-            this.quantity = quantity;
-        }
-
-
-        public void addProduct(string product, double price, int quantity)
-        {
-            this.productList.Add(product);
-            this.price.Add(price);
-            this.quantity.Add(quantity);
-        }
-
-        public void removeProduct(string product)
-        {
-            for (int i = 0; i < this.productList.Count; i++)
-            {
-                if (this.productList[i] == product)
-                {
-                    this.productList.RemoveAt(i);
-                    this.price.RemoveAt(i);
-                    this.quantity.RemoveAt(i);
-                    break;
-                }
-            }
-        }
-
-        public void showProduct()
-        {
-            Console.WriteLine("Danh sách sản phẩm: ");
-            for (int i = 0; i < this.productList.Count; i++)
-            {
-                Console.WriteLine("Tên sản phẩm: " + this.productList[i]);
-                Console.WriteLine("Giá sản phẩm: " + this.price[i]);
-                Console.WriteLine("Số lượng sản phẩm: " + this.quantity.ElementAt(i));
-                Console.WriteLine();
-            }
-        }
-
+        
         public void register()
         {
             //Cái này là lớp đa hình do khách hàng và nhân viên đều có chung nên sẽ thêm môt số thành phần sau

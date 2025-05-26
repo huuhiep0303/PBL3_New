@@ -4,10 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using pbl.entity_class;
-using pbl.Manager.Interface;
+using entity_class;
+using Interface;
 
-namespace pbl.Manager.BLL
+namespace BLL
 {
     internal class PaymentMangement : IPaymentManagement
     {

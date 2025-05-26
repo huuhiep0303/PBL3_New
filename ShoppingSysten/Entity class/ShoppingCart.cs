@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using pbl.Manager.Interface;
+using Interface;
 
-namespace pbl.entity_class
+namespace entity_class
 {
     internal class ShoppingCart// quản lý danh sách sản phẩm đã chọn
     {
         
-        public List<ShoppingCartItem> items { get; private set; } = new();
+        public List<ShoppingCartItem> items { get; private set; } = new List<ShoppingCartItem>();
 
         public void AddItem(ShoppingCartItem item)
         {
@@ -112,11 +112,11 @@ namespace pbl.entity_class
             items.Clear();
             Console.WriteLine("Đã xóa hết item!");
         }
-        public async Task<Order> ConfirmOrder(string CustomerName, IOrderManagement orderService)
+        public async Task<Order> ConfirmOrder(int customerId, IOrderManagement orderService)
         {
            // Tạo danh sách các item cho các item gồm id sản phẩm và số lượng
             var item = items.Select(i => (i.productId, i.quantity)).ToList();
-            var order = await orderService.CreateOrder(CustomerName, item);
+            var order = await orderService.CreateOrder(customerId, item);
             if (order != null)
             {
                 ClearCart();

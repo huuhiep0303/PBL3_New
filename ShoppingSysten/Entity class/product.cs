@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace inforProduct
+namespace entity_class
 {
     internal class product
     {
@@ -24,11 +24,15 @@ namespace inforProduct
         public category CategoryInfo { get; set; }
         public Inventory InventoryInfo { get; set; } // optional
         public string Unit {  get; set; }// đơn vị tính , vd: chai, hộp, thùng,...
-        public string supplier;
+        public string supplier { get; set; }
         //protected product Next;   
 
+        public product()
+        {
+            DynamicAttributes = new Dictionary<string, object>();
+        }
         public product(int Id_product, string Name_product, string Description_product, int categoryId, decimal Price, bool IsAvailable,
-            decimal Discount, bool IsOnlineSale, string supplier)
+            decimal Discount, bool IsOnlineSale, string supplier) : this()
         {
             this.CategoryId = categoryId;
             this.id_product = Id_product;
@@ -39,6 +43,7 @@ namespace inforProduct
             this.isOnlineSale = IsOnlineSale;
             this.discount = Discount;
             this.supplier = supplier;
+
             //this.ReorderLevel = reorderlevel;
             //this.Next = Next;
         }
@@ -78,6 +83,7 @@ namespace inforProduct
                 }
             }
         }
+        
         //public void UpdateStock(int quantity)
         //{
         //    stockQuantity += quantity;

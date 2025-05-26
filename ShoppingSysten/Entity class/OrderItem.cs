@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace pbl.entity_class
+namespace entity_class
 {
-    internal class OrderItem
+    public class OrderItem
     {
-        public int OrderItemId {  get; set; }
+        public int OrderItemId { get; set; }
+        public int OrderId { get; set; }
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public decimal UnitPrice { get; set; } // Giá trên 1 đơn vị sản phẩm

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using pbl.entity_class;
-using pbl.Manager.Interface;
+using entity_class;
+using Interface;
 
 
-namespace pbl.Manager.BLL
+namespace BLL
 {
     internal class InventoryHistoryManagement : IInventoryHistory
     {
-        private readonly List<InventoryTransaction> IT = new();
+        private readonly List<InventoryTransaction> IT = new List<InventoryTransaction>();
         public async Task AddTransaction(InventoryTransaction transaction)
         {
             IT.Add(transaction);

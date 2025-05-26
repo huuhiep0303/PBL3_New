@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace pbl.entity_class
+namespace entity_class
 {
     internal class InventoryTransaction
     {
@@ -16,7 +16,11 @@ namespace pbl.entity_class
         public DateTime ChangedTime { get; set; }// ngày nhập hàng hoặc xuất j đó
         public string note { get; set; }// ghi chú kèm theo
 
-        public InventoryTransaction(int productId, string actionType, int quantityChanged, string note ="")
+        public InventoryTransaction()
+        {
+            ChangedTime = DateTime.Now;
+        }
+        public InventoryTransaction(int productId, string actionType, int quantityChanged, string note ="") : this()
         {
             ProductId = productId;
             ActionType = actionType;

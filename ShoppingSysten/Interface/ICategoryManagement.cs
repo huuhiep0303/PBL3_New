@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using inforProduct;
+using entity_class;
 
 
-namespace pbl.Manager.Interface
+namespace Interface
 {
     internal interface ICategoryManagement
     {

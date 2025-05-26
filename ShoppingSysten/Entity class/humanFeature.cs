@@ -1,6 +1,6 @@
 using System;
 
-namespace humanFeature
+namespace entity_class
 {
     public class Location
     {

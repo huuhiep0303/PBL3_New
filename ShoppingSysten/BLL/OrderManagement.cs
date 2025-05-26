@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using inforProduct;
-using pbl.entity_class;
-using pbl.Manager.Interface;
+using entity_class;
+using Interface;
 
-namespace pbl.Manager.BLL 
+namespace BLL 
 {
     internal class OrderManagement : IOrderManagement
     {
         private readonly IInventoryManagement imService;
         private readonly IProductManagement pmService;
-        private readonly List<Order> orders = new();
+        private readonly List<Order> orders = new List<Order>();
 
         public OrderManagement(IProductManagement pmService, IInventoryManagement imService)
         {
@@ -30,9 +29,9 @@ namespace pbl.Manager.BLL
         }
 
         //khi khách hoặc nhân viên xác nhận những gì đã mua, gọi hàm này để tạo đơn hàng 
-        public async Task<Order> CreateOrder(string customerName, List<(int productID,int quantity)> items)
+        public async Task<Order> CreateOrder(int customerId, List<(int productID,int quantity)> items)
         {
-            var order = new Order(customerName);
+            var order = new Order(customerId);
             foreach (var (productID,quantity) in items)
             {
                 var product = await pmService.GetProductById(productID);
@@ -53,7 +52,7 @@ namespace pbl.Manager.BLL
             }
             orders.Add(order);
             
-            Console.WriteLine($"Tạo đơn cho khách hàng: {customerName}, đơn hàng ở trạng thái: {order.status}");
+            Console.WriteLine($"Tạo đơn cho khách hàng: {customerId}, đơn hàng ở trạng thái: {order.status}");
             return order;
 
         }

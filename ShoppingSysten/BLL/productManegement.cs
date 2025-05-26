@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using inforProduct;
-using pbl.Manager.Interface;
+using Interface;
+using entity_class;
+using ShoppingSysten.Interface;
 
 
 //cứ dùng các list để lưu các danh sách như là danh sách hàng, thông tinh nhân viên, các list đó sẽ được kết nối để lấy thông tin tử csdl sau
-namespace pbl.Manager.BLL
+namespace BLL
 {
     internal class productManagement : IProductManagement
     {
-        //List<category> categoryList;
-        private readonly List<product> products = new();
+        private readonly IProductDAO _repo;
         private readonly ICategoryManagement categoryService;
         private readonly IInventoryManagement inventoryService;
         public productManagement(ICategoryManagement categoryManagement,IInventoryManagement inventoryService)
@@ -54,7 +54,7 @@ namespace pbl.Manager.BLL
         public async Task<List<product>> SearchProducts(string keyword)// tìm kiếm theo tên(cụ thể là keyword}
         {
             return await Task.FromResult(
-            products.Where(p => p.name_product.Contains(keyword, StringComparison.OrdinalIgnoreCase)).ToList()
+            products.Where(p => p.name_product.Contains(keyword)).ToList() //, StringComparison.OrdinalIgnoreCase
         );
         }
         public void DisplayAllProducts()

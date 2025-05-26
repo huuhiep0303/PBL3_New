@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using inforProduct;
-namespace pbl.Manager.Interface
+using entity_class;
+namespace Interface
 {
     internal interface IInventoryManagement
     {

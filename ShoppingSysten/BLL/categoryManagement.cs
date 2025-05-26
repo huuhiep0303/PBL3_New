@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using inforProduct;
-using pbl.Manager.Interface;
-namespace pbl.Manager.BLL
+using Interface;
+using entity_class;
+namespace BLL
 {
     internal class categoryManagement : ICategoryManagement
     {
@@ -60,7 +60,7 @@ namespace pbl.Manager.BLL
         public async Task<List<category>> SearchCategory(string category_name)
         {
             return await Task.FromResult(
-                categories.Where(c => c.CategoryName.Contains(category_name, StringComparison.OrdinalIgnoreCase)).ToList());
+                categories.Where(c => c.CategoryName.Contains(category_name)).ToList()); //, StringComparison.OrdinalIgnoreCase
         }
         public async Task<bool> UpdateCategory(int id, string newName, string newDesc)
         {

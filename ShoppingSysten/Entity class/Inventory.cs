@@ -1,7 +1,6 @@
 ﻿using System;
-using humanFeature;
 
-namespace inforProduct {
+namespace entity_class {
 	public class Inventory
 	{
 		public int productId { get; set; }
@@ -10,7 +9,11 @@ namespace inforProduct {
 		public decimal ReorderLevel { get; set; }
 		public Location Location { get; set; }
 		public DateTime lastUpdate { get; set; }
-		public Inventory(int ProductId, int initialQuantity, int ReorderQuantity) 
+        public Inventory()
+        {
+            lastUpdate = DateTime.Now;
+        }
+        public Inventory(int ProductId, int initialQuantity, int ReorderQuantity) 
 		{
 			productId = ProductId;
 			Quantity = initialQuantity;

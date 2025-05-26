@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using pbl.entity_class;
-using pbl.Manager.Interface;
+using entity_class;
+using Interface;
 
-namespace pbl.Manager.BLL
+namespace BLL
 {
     internal class RequestManagement : IRequestManagement
     {
-        private readonly List<ReturnRequest> returnRequests =new();
+        private readonly List<ReturnRequest> returnRequests =new List<ReturnRequest>();
         private readonly IInventoryManagement iM;
 
         public RequestManagement(IInventoryManagement im)

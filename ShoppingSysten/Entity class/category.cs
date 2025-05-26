@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace inforProduct
+namespace entity_class
 {
     internal class category
     {
@@ -14,7 +14,11 @@ namespace inforProduct
         public string CategoryDescription { get; set; } = string.Empty;
         
         public List<product> products { get; set; }
-        public category(int categoryid, string categoryName,List<product> Products, string categoryDescription)
+        public category()
+        {
+            products = new List<product>();
+        }
+        public category(int categoryid, string categoryName,List<product> Products, string categoryDescription) : this()
         {
             products = Products ?? new List<product>();
             CategoryId = categoryid;

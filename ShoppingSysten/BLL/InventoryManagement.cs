@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using inforProduct;
-using pbl.entity_class;
-using pbl.Manager.Interface;
+using entity_class;
+using Interface;
 
-namespace pbl.Manager.BLL
+namespace BLL
 {
     internal class InventoryManagement : IInventoryManagement
     {
-        private readonly List<Inventory> inventories = new();
+        private readonly List<Inventory> inventories = new List<Inventory>();
         private readonly IInventoryHistory historyService;
         public InventoryManagement(IInventoryHistory historyService)
         {
