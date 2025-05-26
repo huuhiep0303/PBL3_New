@@ -18,20 +18,21 @@ namespace pbl.Manager.Entity
         public int ID_Cusotmer { get; set; }
         public string CustomerName { get; set; }
         public Payment payment { get; set; }
-        public double 
+        public double totalBill { get; set; }
 
-        public Bill(int orderId, decimal totalAmount, string customerName)
+        public Bill(int orderId, decimal totalAmount, string customerName, double totalBill)
         {
             OrderId = orderId;
             TotalAmount = totalAmount;
             CustomerName = customerName;
             BillDate = DateTime.Now;
+            this.totalBill = totalBill;
         }
 
         public override string ToString()
         {
             return $"BillId: {BillId}, OrderId: {OrderId}, TotalAmount: {TotalAmount:C}, " +
-                   $"CustomerName: {CustomerName}, BillDate: {BillDate}";
+                   $"CustomerName: {CustomerName}, BillDate: {BillDate}, Total Bill: {totalBill}" ;
         }
     }
 }
