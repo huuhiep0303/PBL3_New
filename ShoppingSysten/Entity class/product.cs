@@ -6,9 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
+
 namespace entity_class
 {
-    internal class product
+    public class product
     {
         public int id_product { get; set; }
         public string name_product { get; set; }

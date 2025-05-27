@@ -16,7 +16,7 @@ namespace Interface
         Task<List<category>> SearchCategory(string keyword);
         Task<List<category>> GetAllCategories();
         Task<bool> DeleteCategory(int id);
-        Task<bool> UpdateCategory(int id, string newName, string newDesc);
+        Task<bool> UpdateCategory(category nn);
         Task<bool> IsCategoryExist(int categoryId);
     }
 }

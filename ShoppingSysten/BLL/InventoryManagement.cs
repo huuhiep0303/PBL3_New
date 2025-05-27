@@ -10,27 +10,36 @@ namespace BLL
 {
     internal class InventoryManagement : IInventoryManagement
     {
-        private readonly List<Inventory> inventories = new List<Inventory>();
+        private readonly IInventoryDAO _repo;
         private readonly IInventoryHistory historyService;
-        public InventoryManagement(IInventoryHistory historyService)
+        public InventoryManagement(IInventoryDAO inventoryDAO,IInventoryHistory historyService)
         {
+            _repo = inventoryDAO;
             this.historyService = historyService;
         }
         public async Task<bool> CreateRecord(int productId, int initialQuantity, int reorderQuantity)
         {
-            if (inventories.Any(i => i.productId == productId))
+            if ( await _repo.ExistsAsync(productId))
             {
                 Console.WriteLine("Kho của sản phẩm này đã tồn tại");
                 return await Task.FromResult(false);
             }
-            inventories.Add(new Inventory(productId, initialQuantity, reorderQuantity));
+            var inv = new Inventory
+            {
+                productId = productId,
+                Quantity = initialQuantity,
+                ReorderLevel = reorderQuantity,
+                lastUpdate = DateTime.Now
+            };
+            await _repo.AddAsync(inv);
             Console.WriteLine($"✅ Tạo kho cho sản phẩm {productId} với SL: {initialQuantity}");
+            await historyService.AddTransaction(new InventoryTransaction(productId, "INITIAL", initialQuantity, "Khởi tạo tồn kho."));
             return await Task.FromResult(true);
         }
         public async Task<bool> ImportOrReturnStock(int productId, int amount,string actionType)// cập nhật hàng khi thêm và có bị trả hàng
         {
             
-            var inv = inventories.FirstOrDefault(i => i.productId == productId);
+            var inv = await _repo.GetByProductIdAsync(productId);
 
             if (inv == null)
             {
@@ -54,7 +63,7 @@ namespace BLL
         }
         public async Task<bool> ReduceOrSaleStock(int productId, int amount, string actionType)// xuất và bán hàng kèm tạo lịch sử
         {
-            var inv = inventories.FirstOrDefault(i => i.productId == productId);
+            var inv = await _repo.GetByProductIdAsync(productId);
             if (inv == null)
             {
                 Console.WriteLine("Không tồn tại sản phẩm này");
@@ -85,10 +94,11 @@ namespace BLL
         }
         public async Task<Inventory> GetInventoryById(int inventoryId)
         {
-            return await Task.FromResult(inventories.FirstOrDefault(i => i.inventoryId == inventoryId));
+            return await Task.FromResult(await _repo.GetByInventoryIdAsync(inventoryId));
         }
         public async Task DisplayLowStockProductsAsync()
         {
+            var inventories = await _repo.GetAllAsync();
             var lowStock = inventories.Where(i => i.NeedRestock()).ToList();
             if (!lowStock.Any())
             {
@@ -106,7 +116,7 @@ namespace BLL
         }
         public async Task<bool> RestoreStock(int productID, int amount)
         {
-            var inv = inventories.FirstOrDefault(i => i.productId == productID);
+            var inv = await _repo.GetByProductIdAsync(productID);
             if (inv == null)
             {
                 Console.WriteLine("Sai sp");
@@ -119,6 +129,8 @@ namespace BLL
                 , amount, "Khôi phục hàng do bị hủy hàng!"));
             return true;
         }
+        
+
 
     }
 }

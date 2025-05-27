@@ -14,7 +14,7 @@ namespace Interface
         Task<product> GetProductById(int id);
         Task<List<product>> SearchProducts(string keyword);
         Task<bool> UpdateProduct(int productId, product updatedProduct);
-        Task<bool> UpdateDynamicAttribute(int productId, string attrName, object value);
+        Task<bool> UpdateDynamicAttribute(int productId, string attrName, string value);
         Task<List<product>> GetProductsByCategoryName(string categoryName);
         Task<List<product>> GetProductsByCategoryId(int categoryid);
         Task DisplayProductsByCategoryName(string categoryName);

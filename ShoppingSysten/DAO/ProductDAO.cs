@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using entity_class;
+using BLL;
+using Interface;
 
-namespace ShoppingSysten.DAO
+namespace DAO
 {
-    internal class ProductDAO
+    public class ProductDAO : IProductDAO
     {
         private readonly string _connectionString;
         public ProductDAO(string connectionString)
@@ -96,6 +98,16 @@ namespace ShoppingSysten.DAO
             await conn.OpenAsync();
             return await cmd.ExecuteNonQueryAsync() > 0;
         }
+        public async Task<bool> DeleteByIdAsync(int id)
+        {
+            const string sql = "DELETE FROM Products WHERE ProductId = @id";
+            using var conn = new SqlConnection(_connectionString);
+            using var cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            await conn.OpenAsync();
+            return await cmd.ExecuteNonQueryAsync() > 0;
+        }
 
         public async Task<bool> UpdateAsync(product product)
         {
@@ -147,5 +159,55 @@ namespace ShoppingSysten.DAO
             }
             return list;
         }
+        public async Task<Dictionary<string, string>> GetAttributesAsync(int productId)
+        {
+            var attrs = new Dictionary<string, string>();
+            const string sql = "SELECT AttrName, AttrValue FROM ProductAttributes WHERE ProductId = @Pid";
+            using var conn = new SqlConnection(_connectionString);
+            using var cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@Pid", productId);
+            await conn.OpenAsync();
+            using var reader = await cmd.ExecuteReaderAsync();
+            while (await reader.ReadAsync())
+                attrs[reader.GetString(0)] = reader.GetString(1);
+            return attrs;
+        }
+
+        public async Task<bool> AddOrUpdateAttributeAsync(int productId, string attrName, string attrValue)
+        {
+            const string updateSql =
+                "UPDATE ProductAttributes SET AttrValue = @Value " +
+                "WHERE ProductId = @Pid AND AttrName = @Name";
+            const string insertSql =
+                "INSERT INTO ProductAttributes(ProductId, AttrName, AttrValue) " +
+                "VALUES(@Pid, @Name, @Value)";
+            using var conn = new SqlConnection(_connectionString);
+            await conn.OpenAsync();
+            using (var upd = new SqlCommand(updateSql, conn))
+            {
+                upd.Parameters.AddWithValue("@Pid", productId);
+                upd.Parameters.AddWithValue("@Name", attrName);
+                upd.Parameters.AddWithValue("@Value", attrValue);
+                var count = await upd.ExecuteNonQueryAsync();
+                if (count > 0) return true;
+            }
+            using var ins = new SqlCommand(insertSql, conn);
+            ins.Parameters.AddWithValue("@Pid", productId);
+            ins.Parameters.AddWithValue("@Name", attrName);
+            ins.Parameters.AddWithValue("@Value", attrValue);
+            await ins.ExecuteNonQueryAsync();
+            return true;
+        }
+
+        public async Task<bool> DeleteAttributeAsync(int productId, string attrName)
+        {
+            const string sql = "DELETE FROM ProductAttributes WHERE ProductId = @Pid AND AttrName = @Name";
+            using var conn = new SqlConnection(_connectionString);
+            using var cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@Pid", productId);
+            cmd.Parameters.AddWithValue("@Name", attrName);
+            await conn.OpenAsync();
+            return await cmd.ExecuteNonQueryAsync() > 0;
+        }
     }
-}
+}   

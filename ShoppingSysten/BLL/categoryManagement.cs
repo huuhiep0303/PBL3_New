@@ -8,74 +8,41 @@ namespace BLL
 {
     internal class categoryManagement : ICategoryManagement
     {
-        private readonly List<category> categories = new List<category>();
+        private readonly ICategoryDAO _repo;
+        public categoryManagement(ICategoryDAO repo)
+        {
+            _repo = repo;
+        }
 
         public async Task<bool> IsCategoryExist(int categoryId)
         {
-            return await Task.FromResult(categories.Any(c => c.CategoryId == categoryId));
+            return await _repo.IsExistAsync(categoryId);
         }
         public async Task<bool> AddCategory(category category)
-        {
-            if (categories.Any(c => c.CategoryName.Equals(category.CategoryName, StringComparison.OrdinalIgnoreCase))){
-
-                Console.WriteLine("Danh mục đã tồn tại");
-                return false;
-            }
-            categories.Add(category);
-            Console.WriteLine($"Da them danh muc: {category.CategoryName}");
-            return await Task.FromResult(true);
-        }
+        => await _repo.AddAsync(category);
         public async Task<category> GetCategoryById(int categoryid)
-        {
-            return await Task.FromResult(categories.FirstOrDefault(c => c.CategoryId == categoryid));
-        }
+        => await _repo.GetByIdAsync(categoryid);
         public async Task<category> GetCategoryByName(string categoryName)
-        {
-            return await Task.FromResult(
-                categories.FirstOrDefault(c => c.CategoryName.Equals(categoryName, StringComparison.OrdinalIgnoreCase)));
-        }
-        public void DisplayAllCategories()
-        {
-            foreach (var category in categories)
-            {
-                category.DisplayCategory();
-            }
-        }
+        => await _repo.GetByNameAsync(categoryName);
+        //public void DisplayAllCategories()
+        //{
+        //    foreach (var category in categories)
+        //    {
+        //        category.DisplayCategory();
+        //    }
+        //}
         public async Task<List<category>> GetAllCategories()
         {
-            return await Task.FromResult(categories.ToList());
+            return await _repo.GetAllAsync();
         }
         public async Task<bool> DeleteCategory(int categoryId)
-        {
-            var category = await GetCategoryById(categoryId);
-            if (category != null)
-            {
-                categories.Remove(category);
-                Console.WriteLine($"🗑️ Đã xóa danh mục: {category.CategoryName}");
-                return true;
-            }
-            Console.WriteLine("⚠️ Không tìm thấy danh mục để xóa!");
-            return false;
-        }
+        => await _repo.DeleteAsync(categoryId);
         public async Task<List<category>> SearchCategory(string category_name)
         {
-            return await Task.FromResult(
-                categories.Where(c => c.CategoryName.Contains(category_name)).ToList()); //, StringComparison.OrdinalIgnoreCase
+            return await _repo.SearchAsync(category_name);
         }
-        public async Task<bool> UpdateCategory(int id, string newName, string newDesc)
-        {
-            var category = await GetCategoryById(id);
-            if (category != null)
-            {
-                category.CategoryName = newName;
-                category.CategoryDescription = newDesc;
-                Console.WriteLine($"✅ Đã cập nhật danh mục: {category.CategoryName}");
-                return true;
-            }
-
-            Console.WriteLine("⚠️ Không tìm thấy danh mục để cập nhật!");
-            return false;
-        }
+        public async Task<bool> UpdateCategory(category newc)
+        => await _repo.UpdateAsync(newc);
 
 
     }

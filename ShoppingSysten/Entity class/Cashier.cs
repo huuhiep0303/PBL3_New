@@ -1,19 +1,19 @@
-using humanFeature;
-using inforProduct;
-using System;
-using System.Collections.Generic;
-using Employee;
-using pbl.entity_class
-namespace pbl.Manager.Entity
-{
-    public class Cashier : EmployeeObject
-    {
-        protected List<Bill> BillList;
-        protected List<double> TotalPriceList;
-        public Cashier()
-        {
-            BillList = new List<Bill>();
-            TotalPriceList = new List<double>();
-        }
-    }
-}
+
+//using System;
+//using System.Collections.Generic;
+//using entity_class;
+//namespace entity_class
+//{
+//    public class Cashier : Employee
+//    {
+//        public int CahierId { get; set; }
+//        public Decimal Salary { get; set; }
+
+
+//        //public Cashier()
+//        //{
+//        //    BillList = new List<Bill>();
+//        //    TotalPriceList = new List<double>();
+//        //}
+//    }
+//}

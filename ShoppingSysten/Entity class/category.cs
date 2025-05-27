@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace entity_class
 {
-    internal class category
+    public class category
     {
         public int CategoryId {  get; set; }
         public string CategoryName { get; set; }
