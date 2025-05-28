@@ -50,6 +50,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -74,13 +76,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel9.SuspendLayout();
@@ -311,6 +315,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.button19);
+            this.panel2.Controls.Add(this.button20);
+            this.panel2.Controls.Add(this.button17);
+            this.panel2.Controls.Add(this.button18);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.button13);
@@ -331,6 +339,31 @@
             this.panel2.Size = new System.Drawing.Size(277, 779);
             this.panel2.TabIndex = 6;
             // 
+            // button17
+            // 
+            this.button17.FlatAppearance.BorderSize = 0;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.Location = new System.Drawing.Point(82, 360);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(162, 43);
+            this.button17.TabIndex = 19;
+            this.button17.Text = "Kho hàng";
+            this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button18.BackgroundImage")));
+            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button18.FlatAppearance.BorderSize = 0;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Location = new System.Drawing.Point(16, 360);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(60, 43);
+            this.button18.TabIndex = 18;
+            this.button18.UseVisualStyleBackColor = true;
+            // 
             // button12
             // 
             this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
@@ -348,7 +381,7 @@
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(82, 360);
+            this.button13.Location = new System.Drawing.Point(82, 423);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(162, 43);
             this.button13.TabIndex = 15;
@@ -362,7 +395,7 @@
             this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button14.FlatAppearance.BorderSize = 0;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Location = new System.Drawing.Point(25, 360);
+            this.button14.Location = new System.Drawing.Point(25, 423);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(51, 43);
             this.button14.TabIndex = 14;
@@ -623,7 +656,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.NameColumn,
+            this.Namee,
             this.position,
             this.gender,
             this.phone});
@@ -634,6 +667,36 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1065, 351);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "Mã đơn hàng";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            // 
+            // Name
+            // 
+            this.Namee.HeaderText = "Tên khách hàng";
+            this.Namee.MinimumWidth = 6;
+            this.Namee.Name = "Name";
+            // 
+            // position
+            // 
+            this.position.HeaderText = "Ngày đặt hàng";
+            this.position.MinimumWidth = 6;
+            this.position.Name = "position";
+            // 
+            // gender
+            // 
+            this.gender.HeaderText = "Trạng thái";
+            this.gender.MinimumWidth = 6;
+            this.gender.Name = "gender";
+            // 
+            // phone
+            // 
+            this.phone.HeaderText = "Tổng tiền";
+            this.phone.MinimumWidth = 6;
+            this.phone.Name = "phone";
             // 
             // guna2TextBox2
             // 
@@ -666,35 +729,30 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Đơn hàng gần đây";
             // 
-            // ID
+            // button19
             // 
-            this.ID.HeaderText = "Mã đơn hàng";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
+            this.button19.FlatAppearance.BorderSize = 0;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.Location = new System.Drawing.Point(82, 482);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(162, 43);
+            this.button19.TabIndex = 21;
+            this.button19.Text = "Thu ngân";
+            this.button19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button19.UseVisualStyleBackColor = true;
             // 
-            // Name
+            // button20
             // 
-            this.NameColumn.HeaderText = "Tên khách hàng";
-            this.NameColumn.MinimumWidth = 6;
-            this.NameColumn.Name = "Name";
-            // 
-            // position
-            // 
-            this.position.HeaderText = "Ngày đặt hàng";
-            this.position.MinimumWidth = 6;
-            this.position.Name = "position";
-            // 
-            // gender
-            // 
-            this.gender.HeaderText = "Trạng thái";
-            this.gender.MinimumWidth = 6;
-            this.gender.Name = "gender";
-            // 
-            // phone
-            // 
-            this.phone.HeaderText = "Tổng tiền";
-            this.phone.MinimumWidth = 6;
-            this.phone.Name = "phone";
+            this.button20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button20.BackgroundImage")));
+            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button20.FlatAppearance.BorderSize = 0;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.Location = new System.Drawing.Point(25, 482);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(42, 33);
+            this.button20.TabIndex = 20;
+            this.button20.UseVisualStyleBackColor = true;
             // 
             // FormAdmin
             // 
@@ -787,5 +845,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn position;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Namee;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
     }
 }

@@ -16,7 +16,7 @@ namespace ShoppingSysten
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormReportOfAdmin());
+            Application.Run(new FormHoaDon());
         }
     }
 }
