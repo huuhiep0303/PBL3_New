@@ -9,7 +9,7 @@
     <RootNamespace>ShoppingSysten</RootNamespace>
     <AssemblyName>ShoppingSysten</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>9.0</LangVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -69,7 +69,10 @@
     <Compile Include="BLL\RequestManagement.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\InventoryDAO.cs" />
+    <Compile Include="DAO\InventoryHisDAO.cs" />
+    <Compile Include="DAO\OrderDAO.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
+    <Compile Include="DAO\RequestDAO.cs" />
     <Compile Include="Entity class\Bill.cs" />
     <Compile Include="Entity class\Cashier.cs" />
     <Compile Include="Entity class\category.cs" />
@@ -144,10 +147,12 @@
     <Compile Include="Interface\ICategoryDAO.cs" />
     <Compile Include="Interface\ICategoryManagement.cs" />
     <Compile Include="Interface\IEmployeeManagement.cs" />
+    <Compile Include="Interface\IHistoryDAO.cs" />
     <Compile Include="Interface\IInventoryDAO.cs" />
     <Compile Include="Interface\IInventoryHistory.cs" />
     <Compile Include="Interface\IInventoryManagement.cs" />
     <Compile Include="Interface\IManageStore.cs" />
+    <Compile Include="Interface\IOrderDAO.cs" />
     <Compile Include="Interface\IOrderManagement.cs" />
     <Compile Include="Interface\IPaymentManagement.cs" />
     <Compile Include="Interface\IProductDAO.cs" />

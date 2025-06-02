@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 namespace entity_class
 {
     public enum RequestStatus { Approved, Pending, Rejected}
-    internal class ReturnRequest
+    public class ReturnRequest
     {
-        public int ReturnId {get; private set;}
+        public int ReturnId {get; set;}
         public int OrderId {  get; set; }
         public int ProductId { get; set; }
         public int Quantity { get; set; }
         public string Reason { get; set; }
-        public DateTime RequestAt {  get; private set; }
-        public DateTime ProcessAt { get; private set; }
+        public DateTime RequestAt {  get; set; }
+        public DateTime? ProcessAt { get; set; }
         public RequestStatus Status { get; set; }
         public List<string> ImagePaths { get; } = new List<string>();
         public ReturnRequest(int orderId, int productId, int quantity, string reason, IEnumerable<string> imagePaths
@@ -29,6 +29,19 @@ namespace entity_class
             Reason = reason;
             RequestAt = DateTime.Now;
             
+            Status = RequestStatus.Pending;
+            if (imagePaths != null) ImagePaths.AddRange(imagePaths);
+        }
+        public ReturnRequest(int orderId, int productId, int quantity, string reason,DateTime RequestAt, DateTime ProcessAt, IEnumerable<string> imagePaths
+             ) //
+        {
+
+            OrderId = orderId;
+            ProductId = productId;
+            Quantity = quantity;
+            Reason = reason;
+            RequestAt = DateTime.Now;
+
             Status = RequestStatus.Pending;
             if (imagePaths != null) ImagePaths.AddRange(imagePaths);
         }

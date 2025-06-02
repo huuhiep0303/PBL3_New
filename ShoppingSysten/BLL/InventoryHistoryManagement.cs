@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAO;
 using entity_class;
 using Interface;
 
@@ -11,57 +12,44 @@ namespace BLL
 {
     internal class InventoryHistoryManagement : IInventoryHistory
     {
-        private readonly List<InventoryTransaction> IT = new List<InventoryTransaction>();
+        private readonly IHistoryDAO _repo;
+        public InventoryHistoryManagement(string connectionString)
+        {
+            _repo = new InventoryHisDAO(connectionString);
+        }
         public async Task AddTransaction(InventoryTransaction transaction)
         {
-            IT.Add(transaction);
-            Console.WriteLine("Thêm lịch sử");
-            return ;
+            await _repo.AddTransactionAsync(transaction);
+            Console.WriteLine("Thêm lịch sử thành công");
         } 
         public async Task<List<InventoryTransaction>> GetHistoryByProductId(int productID)
         {
-            return await Task.FromResult(IT.Where(p => p.ProductId == productID).ToList());
+            return await _repo.GetHistoryByProductIdAsync(productID);
         }
-        public async Task Display()
+        public async Task Display(int productId)
         {
-            if (!IT.Any())
+            var list = await _repo.GetHistoryByProductIdAsync(productId);
+            if (list.Count == 0)
             {
-                Console.WriteLine("Danh sách rỗng");
-                return ;
+                Console.WriteLine("Không có lịch sử.");
+                return;
             }
-            Console.WriteLine("Lich su: ");
 
-            foreach (InventoryTransaction h in IT)
+            Console.WriteLine("Lịch sử giao dịch:");
+            foreach (var h in list)
             {
-                Console.WriteLine($"- [{h.ChangedTime}] SP: {h.ProductId}, Hành động: {h.ActionType}," +
-                    $" Số lượng: {h.QuantityChanged}, Ghi chú: {h.note}");
-                
+                Console.WriteLine($"- [{h.ChangedTime}] SP: {h.ProductId}, Hành động: {h.ActionType}, SL: {h.QuantityChanged}, Ghi chú: {h.note}");
             }
-            return;
         }
         public async Task DeleteHistoryByTransactionId(int tranId)
         {
-            var history = IT.FirstOrDefault(p => p.TransactionId == tranId);
-            if (history == null)
-            {
-                Console.WriteLine("Lịch sử này không tồn tại");
-                return ;
-            }
-            IT.Remove(history);
-            Console.WriteLine("Xóa thành công!");
-            return;
+            await _repo.DeleteByTransactionIdAsync(tranId);
+            Console.WriteLine("Đã xóa lịch sử theo Transaction ID");
         }
         public async Task DeleteHistoryByProductId(int id)
         {
-            var history = IT.FirstOrDefault(p => p.ProductId == id);
-            if (history == null)
-            {
-                Console.WriteLine("khong thay lịch sử sản phẩm này!");
-                return ;
-            }
-            IT.Remove(history);
-            Console.WriteLine("đã xóa ls nha!");
-            return;
+            await _repo.DeleteByTransactionIdAsync(id);
+            Console.WriteLine("Đã xóa lịch sử theo product ID");
         }
     }
 }

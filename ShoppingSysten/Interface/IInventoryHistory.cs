@@ -11,7 +11,7 @@ namespace Interface
     {
         Task AddTransaction(InventoryTransaction transaction);
         Task<List<InventoryTransaction>> GetHistoryByProductId(int productID);
-        Task Display();
+        Task Display(int p);
         Task DeleteHistoryByTransactionId(int tranId);
         Task DeleteHistoryByProductId(int productID);
         

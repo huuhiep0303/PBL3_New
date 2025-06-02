@@ -7,7 +7,7 @@ using entity_class;
 
 namespace Interface
 {
-    internal interface IOrderManagement
+    public interface IOrderManagement
     {
         Task<Order> GetOrderById(int id);
         Task<List<Order>> GetOrderByDateTime(DateTime date);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace entity_class
 {
-    internal class InventoryTransaction
+    public class InventoryTransaction
     {
         public int TransactionId { get; set; }//TransactionId INT PRIMARY KEY IDENTITY(1,1), -- Tự tăng
         public int ProductId { get; set; }

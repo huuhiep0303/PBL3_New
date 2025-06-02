@@ -15,7 +15,7 @@ namespace entity_class
         public int CustomerId { get; set; }
         public Status status { get; set; }
         public decimal OrderTotal => Items.Sum(p => p.Total);
-
+        public Order() { }
         public Order(int customerId)
         {
             CustomerId = customerId;
