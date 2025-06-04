@@ -58,11 +58,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\CashierManagement.cs" />
     <Compile Include="BLL\categoryManagement.cs" />
     <Compile Include="BLL\InventoryHistoryManagement.cs" />
     <Compile Include="BLL\InventoryManagement.cs" />
-    <Compile Include="BLL\ManageStoreManagemant.cs" />
     <Compile Include="BLL\OrderManagement.cs" />
     <Compile Include="BLL\PaymentMangement.cs" />
     <Compile Include="BLL\productManegement.cs" />
@@ -74,14 +72,10 @@
     <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DAO\RequestDAO.cs" />
     <Compile Include="Entity class\Bill.cs" />
-    <Compile Include="Entity class\Cashier.cs" />
     <Compile Include="Entity class\category.cs" />
-    <Compile Include="Entity class\client.cs" />
-    <Compile Include="Entity class\employeeObject.cs" />
     <Compile Include="Entity class\humanFeature.cs" />
     <Compile Include="Entity class\Inventory.cs" />
     <Compile Include="Entity class\InventoryTransaction.cs" />
-    <Compile Include="Entity class\ManageStore.cs" />
     <Compile Include="Entity class\Order.cs" />
     <Compile Include="Entity class\OrderItem.cs" />
     <Compile Include="Entity class\Payment.cs" />
@@ -143,15 +137,12 @@
     <Compile Include="FormSignup.Designer.cs">
       <DependentUpon>FormSignup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\ICashier.cs" />
     <Compile Include="Interface\ICategoryDAO.cs" />
     <Compile Include="Interface\ICategoryManagement.cs" />
-    <Compile Include="Interface\IEmployeeManagement.cs" />
     <Compile Include="Interface\IHistoryDAO.cs" />
     <Compile Include="Interface\IInventoryDAO.cs" />
     <Compile Include="Interface\IInventoryHistory.cs" />
     <Compile Include="Interface\IInventoryManagement.cs" />
-    <Compile Include="Interface\IManageStore.cs" />
     <Compile Include="Interface\IOrderDAO.cs" />
     <Compile Include="Interface\IOrderManagement.cs" />
     <Compile Include="Interface\IPaymentManagement.cs" />
