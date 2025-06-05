@@ -1,4 +1,5 @@
-﻿namespace ShoppingSysten
+﻿using Guna.UI2.WinForms;
+namespace ShoppingSysten
 {
     partial class FormLogin
     {
