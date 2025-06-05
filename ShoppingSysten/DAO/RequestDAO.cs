@@ -11,7 +11,7 @@ namespace DAO
     using System.Data.SqlClient;
     using System.Diagnostics;
     using System.Threading.Tasks;
-    using entity_class;
+    using ShoppingSysten.Entity_class;
 
     namespace DAL
     {

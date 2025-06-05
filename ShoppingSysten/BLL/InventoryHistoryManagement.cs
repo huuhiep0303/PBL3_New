@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAO;
-using entity_class;
+using ShoppingSysten.Entity_class;
 using Interface;
 
 

@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using entity_class;
+using ShoppingSysten.Entity_class;
 using BLL;
 using Interface;
 
