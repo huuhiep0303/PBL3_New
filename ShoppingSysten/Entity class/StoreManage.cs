@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using entity_class;
-
+using ShoppingSysten.Entity_class;
 
 namespace ShoppingSysten.Entity_class
 {
@@ -15,6 +14,9 @@ namespace ShoppingSysten.Entity_class
         { 
             products = new List<product>();
         }
-
+        public StoreManage(List<product> products)
+        {
+            this.products = products;
+        }
     }
 }

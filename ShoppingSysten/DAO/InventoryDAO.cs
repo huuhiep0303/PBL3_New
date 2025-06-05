@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ShoppingSysten.Entity_class;
 
-namespace DAO
+namespace ShoppingSysten.DAO
 {
     public class InventoryDAO
     {

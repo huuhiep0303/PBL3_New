@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using ShoppingSysten.Entity_class;
 using Interface;
 
-namespace DAO
+namespace ShoppingSysten.DAO
 {
     public class InventoryHisDAO : IHistoryDAO
     {

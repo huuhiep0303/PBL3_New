@@ -8,7 +8,7 @@ using ShoppingSysten.Entity_class;
 using Interface;
 
 
-namespace DAO
+namespace ShoppingSysten.DAO
 {
     public class CategoryDAO : ICategoryDAO
     {

@@ -8,7 +8,7 @@ using ShoppingSysten.Entity_class;
 using BLL;
 using Interface;
 
-namespace DAO
+namespace ShoppingSysten.DAO
 {
     public class ProductDAO : IProductDAO
     {

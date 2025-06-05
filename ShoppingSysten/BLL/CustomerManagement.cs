@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using ShoppingSysten.Interface;
 using ShoppingSysten.Entity_class;
 
-namespace ShoppingSysten.BLL
+namespace BLL
 {
-    class CustomerManagement : ICustomerManagement
+    class CustomerManagement : ICustomerManagemet
     {
-        public 
+
     }
 }

@@ -67,7 +67,7 @@
     <Compile Include="BLL\productManegement.cs" />
     <Compile Include="BLL\RequestManagement.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
-    <Compile Include="DAO\CustomerDao.cs" />
+    <Compile Include="DAO\CustomerDAO.cs" />
     <Compile Include="DAO\InventoryDAO.cs" />
     <Compile Include="DAO\InventoryHisDAO.cs" />
     <Compile Include="DAO\OrderDAO.cs" />
@@ -145,6 +145,7 @@
     </Compile>
     <Compile Include="Interface\ICategoryDAO.cs" />
     <Compile Include="Interface\ICategoryManagement.cs" />
+    <Compile Include="Interface\ICustomerDAO.cs" />
     <Compile Include="Interface\ICustomerManagement.cs" />
     <Compile Include="Interface\IHistoryDAO.cs" />
     <Compile Include="Interface\IInventoryDAO.cs" />
@@ -156,8 +157,6 @@
     <Compile Include="Interface\IProductDAO.cs" />
     <Compile Include="Interface\IProductManagement.cs" />
     <Compile Include="Interface\IRequestManagement.cs" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
-    <Compile Include="obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCustomerOfAdmin.resx">
@@ -196,9 +195,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\ShoppingSysten.csproj.AssemblyReference.cache" />
-    <None Include="obj\Release\ShoppingSysten.csproj.AssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -213,10 +209,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\" />
-    <Folder Include="bin\Release\" />
-    <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

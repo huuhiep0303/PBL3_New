@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using ShoppingSysten.Entity_class;
 
-namespace ShoppingSysten.Interface
+namespace ShoppingSysten.Interface 
+{ 
+ internal interface ICustomerManagement
 {
-    internal interface ICustomerManagement
-    {
-        Task AddShoppingCart(ShoppingCart cart);
-        Task DeleteShoppingCart(ShoppingCart cart);
-        //tìm sản phẩm đã từng mua
-        Task FindProduct(string productId);
-        Task<IEnumerable<ShoppingCart>> GetAllProducts();
-    }
+    Task AddShoppingCart(ShoppingCart cart);
+    Task DeleteShoppingCart(ShoppingCart cart);
+    //tìm sản phẩm đã từng mua
+    Task FindProduct(string productId);
+    Task<IEnumerable<ShoppingCart>> GetAllProducts();
+}
 }
