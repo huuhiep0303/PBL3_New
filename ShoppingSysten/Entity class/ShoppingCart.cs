@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Interface;
 
-namespace entity_class
+namespace ShoppingSysten.Entity_class
 {
     internal class ShoppingCart// quản lý danh sách sản phẩm đã chọn
     {

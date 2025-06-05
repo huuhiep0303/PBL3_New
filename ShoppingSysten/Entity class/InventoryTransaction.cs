@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entity_class
+namespace ShoppingSysten.Entity_class
 {
     public class InventoryTransaction
     {

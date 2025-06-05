@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using entity_class;
+using entiShoppingSysten.Entity_classty_class;
 
 namespace Interface
 {

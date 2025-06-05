@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entity_class
+namespace ShoppingSysten.Entity_class
 {
     internal class ShoppingCartItem // giống order , nhưng để tạm thời , đến khi xác nhận thành order mới bắt đầu xử lý nghiệp vụ liên quan khác
     {
@@ -21,7 +21,5 @@ namespace entity_class
             this.price = price;
             this.quantity = quantity;
         }
-
-
     }
 }

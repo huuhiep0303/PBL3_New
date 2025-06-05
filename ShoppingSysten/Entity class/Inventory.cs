@@ -1,7 +1,9 @@
 ﻿using System;
 
-namespace entity_class {
-	public class Inventory
+namespace ShoppingSysten.Entity_class
+
+{
+    public class Inventory
 	{
 		public int productId { get; set; }
 		public int inventoryId { get; set; }

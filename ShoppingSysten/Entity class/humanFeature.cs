@@ -1,6 +1,6 @@
 using System;
 
-namespace entity_class
+namespace ShoppingSysten.Entity_class
 {
     public class Location
     {

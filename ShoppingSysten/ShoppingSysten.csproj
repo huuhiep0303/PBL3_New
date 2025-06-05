@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\categoryManagement.cs" />
+    <Compile Include="BLL\CustomerManagement.cs" />
     <Compile Include="BLL\InventoryHistoryManagement.cs" />
     <Compile Include="BLL\InventoryManagement.cs" />
     <Compile Include="BLL\OrderManagement.cs" />
@@ -66,16 +67,20 @@
     <Compile Include="BLL\productManegement.cs" />
     <Compile Include="BLL\RequestManagement.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
+    <Compile Include="DAO\CustomerDao.cs" />
     <Compile Include="DAO\InventoryDAO.cs" />
     <Compile Include="DAO\InventoryHisDAO.cs" />
     <Compile Include="DAO\OrderDAO.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DAO\RequestDAO.cs" />
-    <Compile Include="Entity class\Bill.cs" />
+    <Compile Include="Entity class\Cashier.cs" />
     <Compile Include="Entity class\category.cs" />
+    <Compile Include="Entity class\Customer.cs" />
+    <Compile Include="Entity class\Employee.cs" />
     <Compile Include="Entity class\humanFeature.cs" />
     <Compile Include="Entity class\Inventory.cs" />
     <Compile Include="Entity class\InventoryTransaction.cs" />
+    <Compile Include="Entity class\Admin.cs" />
     <Compile Include="Entity class\Order.cs" />
     <Compile Include="Entity class\OrderItem.cs" />
     <Compile Include="Entity class\Payment.cs" />
@@ -83,6 +88,7 @@
     <Compile Include="Entity class\ReturnRequest.cs" />
     <Compile Include="Entity class\ShoppingCart.cs" />
     <Compile Include="Entity class\ShoppingCartItem.cs" />
+    <Compile Include="Entity class\StoreManage.cs" />
     <Compile Include="FormCustomerOfAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,7 @@
     </Compile>
     <Compile Include="Interface\ICategoryDAO.cs" />
     <Compile Include="Interface\ICategoryManagement.cs" />
+    <Compile Include="Interface\ICustomerManagement.cs" />
     <Compile Include="Interface\IHistoryDAO.cs" />
     <Compile Include="Interface\IInventoryDAO.cs" />
     <Compile Include="Interface\IInventoryHistory.cs" />

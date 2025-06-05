@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 
 
-namespace entity_class
+namespace ShoppingSysten.Entity_class
 {
     public class product
     {
@@ -16,7 +16,7 @@ namespace entity_class
         public string description_product { get; set; }
         public int CategoryId { get; set; }
         public decimal price { get; set; }
-        //public decimal stockQuantity { get; set; }
+        public decimal stockQuantity { get; set; }
         public bool isAvailable { get; set; }
         public decimal discount { get; set; }
         //protected decimal ReorderLevel { get; set; }
