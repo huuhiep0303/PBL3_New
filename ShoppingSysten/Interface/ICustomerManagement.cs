@@ -12,8 +12,8 @@ namespace Interface
         Task<ShoppingCart> AddShoppingCart(ShoppingCart cart);
         Task<int> DeleteShoppingCart(ShoppingCart cart);
         //tìm sản phẩm đã từng mua
-        Task<int> FindProduct(string productId);
+        Task<int> FindProduct(int productId,List<product> items);
         Task<List<product>> GetAllProducts();
-        Task<ShoppingCart> GetAllShoppingCart();
+        Task<List<Order>> GetAllOrder();
     }
 }

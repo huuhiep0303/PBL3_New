@@ -19,7 +19,7 @@ namespace ShoppingSysten.DAO
         {
             var conn = new SqlConnection(_connectionString);
             await conn.OpenAsync();
-            var cmd = new SqlCommand("INSERT INTO Employee (EmployeeId, name, gender, birth, address, phone, userName, password, Role, WorkPlace, Shift, Salary) OUTPUT INSERTED.ID VALUES (@EmployeeId, @name, @gender, @birth, @address, @phone, @userName, @password, @Role, @WorkPlace, @Shift, @Salary)", conn);
+            using var cmd = new SqlCommand("INSERT INTO Employee (EmployeeId, name, gender, birth, address, phone, userName, password, Role, WorkPlace, Shift, Salary) OUTPUT INSERTED.ID VALUES (@EmployeeId, @name, @gender, @birth, @address, @phone, @userName, @password, @Role, @WorkPlace, @Shift, @Salary)", conn);
             cmd.Parameters.AddWithValue("@EmployeeId", employee.EmployeeId);
             cmd.Parameters.AddWithValue("@name", employee.name);
             cmd.Parameters.AddWithValue("@gender", employee.gender);
@@ -116,5 +116,4 @@ namespace ShoppingSysten.DAO
             return employee;
         }
     }
-}
 }

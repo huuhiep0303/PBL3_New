@@ -12,6 +12,7 @@ namespace BLL
     {
         private readonly ICustomerManagement cmCustomer;
         private readonly IProductManagement pmProduct;
+        private readonly IOrderManagement orderManagement;
         private readonly IOrderDAO _repo;
         public CustomerManagement(ICustomerManagement cmCustomer, IProductManagement productManagement, IOrderDAO repo)
         {
@@ -43,13 +44,13 @@ namespace BLL
             }
             return 0;
         }
-        public async Task<List<product> GetAllProducts()
+        public async Task<List<product>> GetAllProducts()
         {
             return await pmProduct.GetAllProductsAsync();
         }
-        public async Task<ShoppingCart> GetAllShoppingCart()
+        public async Task<List<Order>> GetAllOrder()
         {
-
+            return await _repo.GetAllOrders();    
         }
     }
 }

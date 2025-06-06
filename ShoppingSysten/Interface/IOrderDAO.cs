@@ -16,7 +16,6 @@ namespace Interface
         Task<List<Order>> GetAllOrders();
         Task<bool> DeleteOrder(int orderId);
         Task<bool> UpdateOrderStatus(int orderId, Status newStatus);
-
     }
 
 }

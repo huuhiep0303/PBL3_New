@@ -119,5 +119,9 @@ namespace BLL
                 }
             }
         }
+        public async Task<List<Order>> GetAllOrder()
+        {
+            return await _repo.GetAllOrders();
+        }
     }
 }
