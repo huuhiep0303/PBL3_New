@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShoppingSysten
+namespace Formemployee
 {
-    public partial class FormProductOfAdmin: Form
+    public partial class UC_Thongke : UserControl
     {
-        public FormProductOfAdmin()
+        public UC_Thongke()
         {
             InitializeComponent();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }

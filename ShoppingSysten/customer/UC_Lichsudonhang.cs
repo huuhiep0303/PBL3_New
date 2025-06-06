@@ -8,16 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShoppingSysten
+namespace Formcustomer.customer
 {
-    public partial class FormProductOfAdmin: Form
+    public partial class UC_Lichsudonhang : UserControl
     {
-        public FormProductOfAdmin()
+        public UC_Lichsudonhang()
         {
             InitializeComponent();
+
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

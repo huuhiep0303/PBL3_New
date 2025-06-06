@@ -8,23 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShoppingSysten
+namespace Formcustomer.customer
 {
-    public partial class FormProductOfAdmin: Form
+    public partial class UC_Danhgia : UserControl
     {
-        public FormProductOfAdmin()
+        public UC_Danhgia()
         {
             InitializeComponent();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+           
+            MessageBox.Show("Cảm ơn bạn đã đánh giá sản phẩm của chúng tôi!");
         }
     }
 }

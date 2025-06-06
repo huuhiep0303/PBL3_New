@@ -8,21 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShoppingSysten
+namespace Formemployee
 {
-    public partial class FormProductOfAdmin: Form
+    public partial class UC_Nhacungcap : UserControl
     {
-        public FormProductOfAdmin()
+        public UC_Nhacungcap()
         {
             InitializeComponent();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
