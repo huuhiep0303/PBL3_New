@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ShoppingSysten.Entity_class;
 
-namespace ShoppingSysten.Entity_class
+namespace Entity_class
 {
     class Customer : human
     {
-        public ShoppingCart cart { get ; set; }
+        public int CustomerId;
         public double score { get; set; }
 
         public Customer() {
-            cart = new ShoppingCart();
             score = 0;
         }
-        public Customer(double score)
+        public Customer(double score, string name, DateTime birth, string gender,
+            string address, string phone, string userName,
+            string password) : base( name,  birth,  gender,
+                address,  phone,  userName, password)
         {
-            cart = new ShoppingCart();
+            this.score = score;
         }
     }
 }

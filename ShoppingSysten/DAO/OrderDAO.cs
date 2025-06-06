@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
-using ShoppingSysten.Entity_class;
+using Entity_class;
 using Interface;
 
-namespace ShoppingSysten.DAO
+namespace DAO
 {
     public class OrderDAO : IOrderDAO
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShoppingSysten.Entity_class
+namespace Entity_class
 {
     public enum Status { Pending, Completed, Canceled}
     public class Order

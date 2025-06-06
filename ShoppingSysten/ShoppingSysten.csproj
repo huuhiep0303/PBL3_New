@@ -9,7 +9,6 @@
     <RootNamespace>ShoppingSysten</RootNamespace>
     <AssemblyName>ShoppingSysten</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -68,6 +67,7 @@
     <Compile Include="BLL\RequestManagement.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\CustomerDAO.cs" />
+    <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DAO\InventoryDAO.cs" />
     <Compile Include="DAO\InventoryHisDAO.cs" />
     <Compile Include="DAO\OrderDAO.cs" />
@@ -143,6 +143,7 @@
     <Compile Include="FormSignup.Designer.cs">
       <DependentUpon>FormSignup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IEmployeeDAO.cs" />
     <Compile Include="Interface\ICategoryDAO.cs" />
     <Compile Include="Interface\ICategoryManagement.cs" />
     <Compile Include="Interface\ICustomerDAO.cs" />

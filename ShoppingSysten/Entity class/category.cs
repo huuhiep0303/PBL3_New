@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace ShoppingSysten.Entity_class
+namespace Entity_class
 {
     public class category
     {

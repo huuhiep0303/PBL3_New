@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Interface;
-using ShoppingSysten.Entity_class;
+using Entity_class;
 namespace BLL
 {
     internal class categoryManagement : ICategoryManagement

@@ -74,13 +74,13 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel9.SuspendLayout();
@@ -287,6 +287,7 @@
             this.label16.Size = new System.Drawing.Size(154, 19);
             this.label16.TabIndex = 2;
             this.label16.Text = "+8% so với tháng trước";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label17
             // 
@@ -623,7 +624,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.NameColumn,
+            this.Name,
             this.position,
             this.gender,
             this.phone});
@@ -634,6 +635,36 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1065, 351);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "Mã đơn hàng";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Tên khách hàng";
+            this.Name.MinimumWidth = 6;
+            this.Name.Name = "Name";
+            // 
+            // position
+            // 
+            this.position.HeaderText = "Ngày đặt hàng";
+            this.position.MinimumWidth = 6;
+            this.position.Name = "position";
+            // 
+            // gender
+            // 
+            this.gender.HeaderText = "Trạng thái";
+            this.gender.MinimumWidth = 6;
+            this.gender.Name = "gender";
+            // 
+            // phone
+            // 
+            this.phone.HeaderText = "Tổng tiền";
+            this.phone.MinimumWidth = 6;
+            this.phone.Name = "phone";
             // 
             // guna2TextBox2
             // 
@@ -665,36 +696,6 @@
             this.label5.Size = new System.Drawing.Size(226, 32);
             this.label5.TabIndex = 0;
             this.label5.Text = "Đơn hàng gần đây";
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "Mã đơn hàng";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            // 
-            // Name
-            // 
-            this.NameColumn.HeaderText = "Tên khách hàng";
-            this.NameColumn.MinimumWidth = 6;
-            this.NameColumn.Name = "Name";
-            // 
-            // position
-            // 
-            this.position.HeaderText = "Ngày đặt hàng";
-            this.position.MinimumWidth = 6;
-            this.position.Name = "position";
-            // 
-            // gender
-            // 
-            this.gender.HeaderText = "Trạng thái";
-            this.gender.MinimumWidth = 6;
-            this.gender.Name = "gender";
-            // 
-            // phone
-            // 
-            this.phone.HeaderText = "Tổng tiền";
-            this.phone.MinimumWidth = 6;
-            this.phone.Name = "phone";
             // 
             // FormAdmin
             // 
@@ -787,5 +788,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn position;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
     }
 }

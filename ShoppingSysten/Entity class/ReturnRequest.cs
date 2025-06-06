@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 //using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace ShoppingSysten.Entity_class
+namespace Entity_class
 {
     public enum RequestStatus { Approved, Pending, Rejected}
     public class ReturnRequest

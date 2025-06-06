@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
-using ShoppingSysten.Entity_class;
+using Entity_class;
 
-namespace ShoppingSysten.DAO
+namespace DAO
 {
     public class InventoryDAO
     {

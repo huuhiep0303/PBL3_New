@@ -4,21 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShoppingSysten.Entity_class
+namespace Entity_class
 {
     class Admin : Employee
     {
-        List <Employee> employees;
-        List <Order> orders;
-        Admin(List<Employee> employees, List<Order> orders)
+        public override string Role
         {
-            this.employees = employees;
-            this.orders = orders;
+            get => base.name + "Admin";
+            set => base.name = value;
         }
-        Admin()
-        {
-            employees = new List<Employee>();
-            orders = new List<Order>();
-        }
+        Admin(){}
+        public Admin(string workPlace, int shift, double salary, string name, DateTime birth, string gender,
+            string address, string phone, string userName, string password) : base(workPlace,shift, salary,
+                name, birth, gender, address, phone, userName, password){}
     }
 }

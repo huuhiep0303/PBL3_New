@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ShoppingSysten.Entity_class;
+using Entity_class;
 
-namespace ShoppingSysten.Interface 
+namespace Interface 
 { 
- internal interface ICustomerManagement
-{
-    Task AddShoppingCart(ShoppingCart cart);
-    Task DeleteShoppingCart(ShoppingCart cart);
-    //tìm sản phẩm đã từng mua
-    Task FindProduct(string productId);
-    Task<IEnumerable<ShoppingCart>> GetAllProducts();
-}
+     internal interface ICustomerManagement
+    {
+        Task<ShoppingCart> AddShoppingCart(ShoppingCart cart);
+        Task<int> DeleteShoppingCart(ShoppingCart cart);
+        //tìm sản phẩm đã từng mua
+        Task<int> FindProduct(string productId);
+        Task<List<product>> GetAllProducts();
+        Task<ShoppingCart> GetAllShoppingCart();
+    }
 }

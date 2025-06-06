@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ShoppingSysten.Entity_class;
+using Entity_class;
 
 namespace Interface
 {
@@ -18,5 +18,6 @@ namespace Interface
         Task<List<product>> GetProductsByCategoryName(string categoryName);
         Task<List<product>> GetProductsByCategoryId(int categoryid);
         Task DisplayProductsByCategoryName(string categoryName);
+        Task<List<product>> GetAllProductsAsync();
     }
 }
