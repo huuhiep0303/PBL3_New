@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ShoppingSysten.Entity_class;
+using Entity_class;
 using DAO;
 
 namespace Interface
@@ -20,5 +20,6 @@ namespace Interface
         Task<Dictionary<string, string>> GetAttributesAsync(int productId);
         Task<bool> AddOrUpdateAttributeAsync(int productId, string attrName, string attrValue);
         Task<bool> DeleteAttributeAsync(int productId, string attrName);
+        Task<List<product>> GetAllProductsAsync();
     }
 }

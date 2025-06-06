@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
-using ShoppingSysten.Entity_class;
+using Entity_class;
 using BLL;
 using Interface;
 
-namespace ShoppingSysten.DAO
+namespace DAO
 {
     public class ProductDAO : IProductDAO
     {
@@ -273,6 +273,40 @@ namespace ShoppingSysten.DAO
                     return await cmd.ExecuteNonQueryAsync() > 0;
                 }
             }
+        }
+        public async Task<List<product>> GetAllProductsAsync()
+        {
+            var products = new List<product>();
+
+            using var conn = new SqlConnection(_connectionString);
+            await conn.OpenAsync();
+
+            string sql = "SELECT * FROM Product"; // tên bảng trong SQL Server
+            using var cmd = new SqlCommand(sql, conn);
+            using var reader = await cmd.ExecuteReaderAsync();
+
+            while (await reader.ReadAsync())
+            {
+                var p = new product
+                {
+                    id_product = reader.GetInt32(reader.GetOrdinal("id_product")),
+                    name_product = reader.GetString(reader.GetOrdinal("name_product")),
+                    description_product = reader.GetString(reader.GetOrdinal("description_product")),
+                    CategoryId = reader.GetInt32(reader.GetOrdinal("CategoryId")),
+                    price = reader.GetDecimal(reader.GetOrdinal("price")),
+                    stockQuantity = reader.GetDecimal(reader.GetOrdinal("stockQuantity")),
+                    isAvailable = reader.GetBoolean(reader.GetOrdinal("isAvailable")),
+                    discount = reader.GetDecimal(reader.GetOrdinal("discount")),
+                    isOnlineSale = reader.GetBoolean(reader.GetOrdinal("isOnlineSale")),
+                    Unit = reader.GetString(reader.GetOrdinal("Unit")),
+                    supplier = reader.GetString(reader.GetOrdinal("supplier")),
+                    DynamicAttributes = new Dictionary<string, object>() // nếu bạn lưu riêng
+                };
+
+                products.Add(p);
+            }
+
+            return products;
         }
     }
 }

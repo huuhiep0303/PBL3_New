@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Threading.Tasks;
+using Entity_class;
 
-namespace ShoppingSysten.DAO
+namespace DAO
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data.SqlClient;
-    using System.Diagnostics;
-    using System.Threading.Tasks;
-    using ShoppingSysten.Entity_class;
-
     namespace DAL
     {
         public class RequestDAO

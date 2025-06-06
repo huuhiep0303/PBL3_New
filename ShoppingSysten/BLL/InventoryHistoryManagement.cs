@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ShoppingSysten.DAO;
-using ShoppingSysten.Entity_class;
+using DAO;
+using Entity_class;
 using Interface;
 
 

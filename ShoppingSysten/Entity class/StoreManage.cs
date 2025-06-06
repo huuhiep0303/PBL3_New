@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ShoppingSysten.Entity_class;
 
-namespace ShoppingSysten.Entity_class
+namespace Entity_class
 {
     class StoreManage : Employee
     {
-        public List<product> products;
-        public StoreManage() 
-        { 
-            products = new List<product>();
-        }
-        public StoreManage(List<product> products)
+        public override string Role
         {
-            this.products = products;
+            get => base.name + "StoreManage";
+            set => base.name = value;
         }
+        public StoreManage() {}
+        public StoreManage(string workPlace, int shift, double salary, string name, DateTime birth, string gender,
+            string address, string phone, string userName, string password) : base(workPlace, shift, salary,
+                name, birth, gender, address, phone, userName, password)
+        { }
     }
 }

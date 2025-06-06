@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShoppingSysten.Entity_class
+namespace Entity_class
 
 {
     public class Inventory

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace ShoppingSysten.Entity_class
+namespace Entity_class
 {
     public enum PaymentStatus { Pending, Completed, Failed, Canceled}
     public enum PaymentMethod { CreditCart, BankTransfer, Wallet, Cash}

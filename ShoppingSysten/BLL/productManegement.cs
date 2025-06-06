@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Interface;
-using ShoppingSysten.Entity_class;
+using Entity_class;
 
 
 //cứ dùng các list để lưu các danh sách như là danh sách hàng, thông tinh nhân viên, các list đó sẽ được kết nối để lấy thông tin tử csdl sau
@@ -121,6 +121,10 @@ namespace BLL
             {
                 product.DisplayProduct();
             }
+        }
+        public async Task<List<product>> GetAllProductsAsync()
+        {
+            return await _repo.GetAllProductsAsync();
         }
     }
 
