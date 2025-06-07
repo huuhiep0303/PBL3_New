@@ -39,9 +39,11 @@
             this.label14 = new System.Windows.Forms.Label();
             this.button15 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -61,7 +63,7 @@
             this.button17 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +71,8 @@
             this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -200,10 +204,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.button13);
             this.panel2.Controls.Add(this.button14);
+            this.panel2.Controls.Add(this.button22);
+            this.panel2.Controls.Add(this.button23);
+            this.panel2.Controls.Add(this.button24);
+            this.panel2.Controls.Add(this.button25);
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.button11);
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button10);
@@ -219,6 +227,56 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(208, 547);
             this.panel2.TabIndex = 12;
+            // 
+            // button22
+            // 
+            this.button22.FlatAppearance.BorderSize = 0;
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button22.Location = new System.Drawing.Point(82, 360);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(162, 43);
+            this.button22.TabIndex = 27;
+            this.button22.Text = "Kho hàng";
+            this.button22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button22.UseVisualStyleBackColor = true;
+            // 
+            // button23
+            // 
+            this.button23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button23.BackgroundImage")));
+            this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button23.FlatAppearance.BorderSize = 0;
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button23.Location = new System.Drawing.Point(12, 360);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(60, 43);
+            this.button23.TabIndex = 26;
+            this.button23.UseVisualStyleBackColor = true;
+            // 
+            // button24
+            // 
+            this.button24.FlatAppearance.BorderSize = 0;
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button24.Location = new System.Drawing.Point(82, 423);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(162, 43);
+            this.button24.TabIndex = 25;
+            this.button24.Text = "Báo cáo";
+            this.button24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button24.UseVisualStyleBackColor = true;
+            // 
+            // button25
+            // 
+            this.button25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button25.BackgroundImage")));
+            this.button25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button25.FlatAppearance.BorderSize = 0;
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button25.Location = new System.Drawing.Point(21, 423);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(51, 43);
+            this.button25.TabIndex = 24;
+            this.button25.UseVisualStyleBackColor = true;
             // 
             // button12
             // 
@@ -441,6 +499,30 @@
             this.comboBox1.Size = new System.Drawing.Size(108, 21);
             this.comboBox1.TabIndex = 8;
             // 
+            // button21
+            // 
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.Location = new System.Drawing.Point(1083, 85);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(65, 49);
+            this.button21.TabIndex = 9;
+            this.button21.Text = "OK";
+            this.button21.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Sắp xếp theo ID",
+            "Sắp xếp theo tên",
+            "Sắp xếp theo giá",
+            "Sắp xếp theo số lượng còn lại"});
+            this.comboBox1.Location = new System.Drawing.Point(923, 99);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(142, 24);
+            this.comboBox1.TabIndex = 8;
+            // 
             // button20
             // 
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.System;
@@ -495,7 +577,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.Name,
+            this.name,
             this.position,
             this.gender,
             this.phone,
@@ -519,9 +601,9 @@
             // 
             // Name
             // 
-            this.Name.HeaderText = "Tên sản phẩm";
-            this.Name.MinimumWidth = 6;
-            this.Name.Name = "Name";
+            this.name.HeaderText = "Tên sản phẩm";
+            this.name.MinimumWidth = 6;
+            this.name.Name = "Name";
             // 
             // position
             // 
@@ -585,6 +667,31 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Danh sách sản phẩm";
             // 
+            // button13
+            // 
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(82, 482);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(162, 43);
+            this.button13.TabIndex = 31;
+            this.button13.Text = "Thu ngân";
+            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button14.BackgroundImage")));
+            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Location = new System.Drawing.Point(25, 482);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(42, 33);
+            this.button14.TabIndex = 30;
+            this.button14.UseVisualStyleBackColor = true;
+            // 
             // FormProductOfAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,8 +727,6 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
@@ -651,6 +756,12 @@
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Namee;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
     }
 }

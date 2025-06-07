@@ -30,9 +30,7 @@ namespace ShoppingSysten
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmployeeOfAdmin));
-            this.button13 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -46,18 +44,24 @@ namespace ShoppingSysten
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.button15 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button20 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,27 +71,14 @@ namespace ShoppingSysten
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button13
-            // 
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(82, 360);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(162, 43);
-            this.button13.TabIndex = 15;
-            this.button13.Text = "Báo cáo";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.UseVisualStyleBackColor = true;
             // 
             // button16
             // 
@@ -100,18 +91,6 @@ namespace ShoppingSysten
             this.button16.Size = new System.Drawing.Size(28, 34);
             this.button16.TabIndex = 18;
             this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button14.BackgroundImage")));
-            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Location = new System.Drawing.Point(25, 360);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(51, 43);
-            this.button14.TabIndex = 14;
-            this.button14.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
@@ -274,10 +253,14 @@ namespace ShoppingSysten
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.button13);
             this.panel2.Controls.Add(this.button14);
+            this.panel2.Controls.Add(this.button22);
+            this.panel2.Controls.Add(this.button23);
+            this.panel2.Controls.Add(this.button24);
+            this.panel2.Controls.Add(this.button25);
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.button11);
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button10);
@@ -293,6 +276,56 @@ namespace ShoppingSysten
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(277, 779);
             this.panel2.TabIndex = 24;
+            // 
+            // button22
+            // 
+            this.button22.FlatAppearance.BorderSize = 0;
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button22.Location = new System.Drawing.Point(82, 364);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(162, 43);
+            this.button22.TabIndex = 27;
+            this.button22.Text = "Kho hàng";
+            this.button22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button22.UseVisualStyleBackColor = true;
+            // 
+            // button23
+            // 
+            this.button23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button23.BackgroundImage")));
+            this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button23.FlatAppearance.BorderSize = 0;
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button23.Location = new System.Drawing.Point(12, 364);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(60, 43);
+            this.button23.TabIndex = 26;
+            this.button23.UseVisualStyleBackColor = true;
+            // 
+            // button24
+            // 
+            this.button24.FlatAppearance.BorderSize = 0;
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button24.Location = new System.Drawing.Point(82, 427);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(162, 43);
+            this.button24.TabIndex = 25;
+            this.button24.Text = "Báo cáo";
+            this.button24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button24.UseVisualStyleBackColor = true;
+            // 
+            // button25
+            // 
+            this.button25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button25.BackgroundImage")));
+            this.button25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button25.FlatAppearance.BorderSize = 0;
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button25.Location = new System.Drawing.Point(21, 427);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(51, 43);
+            this.button25.TabIndex = 24;
+            this.button25.UseVisualStyleBackColor = true;
             // 
             // panel7
             // 
@@ -366,6 +399,29 @@ namespace ShoppingSysten
             this.panel3.Size = new System.Drawing.Size(1165, 696);
             this.panel3.TabIndex = 25;
             // 
+            // button20
+            // 
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.Location = new System.Drawing.Point(1079, 78);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(65, 49);
+            this.button20.TabIndex = 9;
+            this.button20.Text = "OK";
+            this.button20.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Sắp xếp theo ID",
+            "Sắp xếp theo tên",
+            "Sắp xếp theo lương"});
+            this.comboBox1.Location = new System.Drawing.Point(919, 92);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(142, 24);
+            this.comboBox1.TabIndex = 8;
+            // 
             // button19
             // 
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.System;
@@ -405,7 +461,7 @@ namespace ShoppingSysten
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this._Name,
+            this.name,
             this.position,
             this.gender,
             this.phone,
@@ -427,9 +483,9 @@ namespace ShoppingSysten
             // 
             // Name
             // 
-            this._Name.HeaderText = "Tên nhân viên";
-            this._Name.MinimumWidth = 6;
-            this._Name.Name = "Name";
+            this.name.HeaderText = "Tên nhân viên";
+            this.name.MinimumWidth = 6;
+            this.name.Name = "Name";
             // 
             // position
             // 
@@ -520,28 +576,30 @@ namespace ShoppingSysten
             this.button1.Text = "AD";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button20
+            // button13
             // 
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(1079, 78);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(65, 49);
-            this.button20.TabIndex = 9;
-            this.button20.Text = "OK";
-            this.button20.UseVisualStyleBackColor = true;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(82, 487);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(162, 43);
+            this.button13.TabIndex = 29;
+            this.button13.Text = "Thu ngân";
+            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button13.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // button14
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Sắp xếp theo ID",
-            "Sắp xếp theo tên",
-            "Sắp xếp theo lương"});
-            this.comboBox1.Location = new System.Drawing.Point(919, 92);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(142, 24);
-            this.comboBox1.TabIndex = 8;
+            this.button14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button14.BackgroundImage")));
+            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Location = new System.Drawing.Point(25, 487);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(42, 33);
+            this.button14.TabIndex = 28;
+            this.button14.UseVisualStyleBackColor = true;
             // 
             // FormEmployeeOfAdmin
             // 
@@ -566,10 +624,7 @@ namespace ShoppingSysten
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
@@ -608,5 +663,12 @@ namespace ShoppingSysten
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn _Name;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
     }
 }
