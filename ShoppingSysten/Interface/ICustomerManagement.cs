@@ -14,6 +14,6 @@ namespace Interface
         //tìm sản phẩm đã từng mua
         Task<int> FindProduct(int productId,List<product> items);
         Task<List<product>> GetAllProducts();
-        Task<List<Order>> GetAllOrder();
+        Task<List<Order>> GetAllOrderOfCustomer(int customerId);
     }
 }

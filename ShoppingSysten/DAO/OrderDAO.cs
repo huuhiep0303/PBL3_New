@@ -125,7 +125,7 @@ namespace DAO
             return result;
         }
 
-        public async Task<List<Order>> GetAllOrders()
+        public async Task<List<Order>> GetAllOrdersById(int customerID )
         {
             var result = new List<Order>();
 
@@ -138,13 +138,17 @@ namespace DAO
                     {
                         while (await reader.ReadAsync())
                         {
-                            result.Add(new Order
+                            if (customerID == reader.GetInt32(0))
                             {
-                                OrderId = reader.GetInt32(0),
-                                CustomerId = reader.GetInt32(1),
-                                OrderDate = reader.GetDateTime(2),
-                                status = (Status)reader.GetInt32(3)
-                            });
+                                result.Add(new Order
+                                {
+                                    OrderId = reader.GetInt32(0),
+                                    CustomerId = reader.GetInt32(1),
+                                    OrderDate = reader.GetDateTime(2),
+                                    status = (Status)reader.GetInt32(3)
+                                });
+                            }
+                            else return null;
                         }
                     }
                 }
@@ -187,6 +191,33 @@ namespace DAO
                     return rows > 0;
                 }
             }
+        }
+        public async Task<List<Order>> GetAllOrders()
+        {
+            var result = new List<Order>();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                await conn.OpenAsync();
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Orders", conn))
+                {
+                    using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {                            
+                                result.Add(new Order
+                                {
+                                    OrderId = reader.GetInt32(0),
+                                    CustomerId = reader.GetInt32(1),
+                                    OrderDate = reader.GetDateTime(2),
+                                    status = (Status)reader.GetInt32(3)
+                                });
+                        }
+                    }
+                }
+            }
+
+            return result;
         }
     }
 }

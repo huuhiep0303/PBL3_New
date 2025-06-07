@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Entity_class;
 
-namespace ShoppingSysten.Interface
+namespace Interface
 {
     internal interface IEmployeeDAO
     {

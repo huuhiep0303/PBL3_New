@@ -14,11 +14,14 @@ namespace BLL
         private readonly IProductManagement pmProduct;
         private readonly IOrderManagement orderManagement;
         private readonly IOrderDAO _repo;
-        public CustomerManagement(ICustomerManagement cmCustomer, IProductManagement productManagement, IOrderDAO repo)
+        public CustomerManagement(ICustomerManagement cmCustomer,
+            IProductManagement productManagement,
+            IOrderDAO repo, IOrderManagement orderManagement)
         {
             this.cmCustomer = cmCustomer;
             this.pmProduct = productManagement;
             _repo = repo;
+            this.orderManagement = orderManagement;
         }
         public async Task<ShoppingCart> AddShoppingCart(ShoppingCart cart)
         {
@@ -48,9 +51,17 @@ namespace BLL
         {
             return await pmProduct.GetAllProductsAsync();
         }
-        public async Task<List<Order>> GetAllOrder()
+        public async Task<List<Order>> GetAllOrderOfCustomer(int customerId)
         {
-            return await _repo.GetAllOrders();    
+            var list = await _repo.GetAllOrdersById(customerId);
+            foreach (var order in list)
+            {
+                Console.WriteLine(order.CustomerId);
+                Console.WriteLine(order.OrderId);
+                Console.WriteLine(order.OrderDate);
+                Console.WriteLine(order.Items);
+            }
+            return list;
         }
     }
 }

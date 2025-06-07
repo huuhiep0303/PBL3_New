@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entity_class;
-using ShoppingSysten.Interface;
 using Interface;
-
 namespace BLL 
 {
     internal class OrderManagement : IOrderManagement
@@ -63,12 +61,14 @@ namespace BLL
         }
         public async Task DisplayAllOrder()
         {
-            //    foreach (var order in orders)
-            //    {
-            //        order.DisplayOrder();
-            //    }
-            //    return;
+            var orders = await _repo.GetAllOrders();
+            foreach (var order in orders)
+            {
+                order.DisplayOrder();
+            }
+            return;
         }
+        //show ra toàn bộ hoá đơn ngày hôm đó
         public async Task DisplayOrderByDate(DateTime date)
         {
             var orderdate = await GetOrderByDateTime(date);
@@ -105,6 +105,7 @@ namespace BLL
             return await Task.FromResult(true);
 
         }
+        //Huỷ hoá đơn
         public async Task CancelOverDueOrder(TimeSpan ts)
         {
             var now = DateTime.Now;
@@ -119,6 +120,12 @@ namespace BLL
                 }
             }
         }
+        //hàm lấy toàn bộ hoá đơn của mã khách hàng
+        public async Task<List<Order>> GetAllOrderById(int customerID)
+        {
+            return await _repo.GetAllOrdersById(customerID);
+        }
+        //hàm lấy toàn bộ hoá đơn
         public async Task<List<Order>> GetAllOrder()
         {
             return await _repo.GetAllOrders();

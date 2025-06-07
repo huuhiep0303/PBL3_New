@@ -18,5 +18,6 @@ namespace Interface
         Task<bool> CancelOrder(int orderID);
         Task CancelOverDueOrder(TimeSpan ts);
         Task<List<Order>> GetAllOrder();
+        Task<List<Order>> GetAllOrderById(int customerID);
     }
 }

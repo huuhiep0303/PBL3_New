@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CashierManagement.cs" />
     <Compile Include="BLL\categoryManagement.cs" />
     <Compile Include="BLL\CustomerManagement.cs" />
     <Compile Include="BLL\InventoryHistoryManagement.cs" />
@@ -221,6 +222,7 @@
     <Compile Include="FormSignup.Designer.cs">
       <DependentUpon>FormSignup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\ICashierManagement.cs" />
     <Compile Include="Interface\IEmployeeDAO.cs" />
     <Compile Include="Interface\ICategoryDAO.cs" />
     <Compile Include="Interface\ICategoryManagement.cs" />
