@@ -23,14 +23,36 @@ namespace BLL
             _repo = repo;
             this.orderManagement = orderManagement;
         }
-        public async Task<ShoppingCart> AddShoppingCart(ShoppingCart cart)
+        public async Task AddOrder(Order order)
         {
-            return await cmCustomer.AddShoppingCart(cart);
+            if (order == null || order.Items == null || order.Items.Count == 0)
+            {
+                Console.WriteLine("❌ Đơn hàng không hợp lệ.");
+            }
+
+            order.OrderDate = DateTime.Now;
+            order.status = Status.Pending; // hoặc giá trị mặc định phù hợp
+
+            await _repo.InsertOrder(order); // gọi DAO để lưu vào DB
+
+            Console.WriteLine("✅ Đã thêm đơn hàng cho khách hàng ID: " + order.CustomerId);
         }
-        public async Task<int> DeleteShoppingCart(ShoppingCart cart)
+
+        public async Task<int> DeleteOrder(Order order)
         {
-            return await cmCustomer.DeleteShoppingCart(cart);
+            try
+            {
+                await _repo.DeleteOrder(order.OrderId); // gọi DAO xoá
+                Console.WriteLine("✅ Đã xoá đơn hàng có ID = " + order.OrderId);
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("❌ Lỗi khi xoá đơn hàng: " + ex.Message);
+                return 0;
+            }
         }
+
         //tìm sản phẩm đã từng mua
         public async Task<int> FindProduct(int productId, List<product> items) 
         {

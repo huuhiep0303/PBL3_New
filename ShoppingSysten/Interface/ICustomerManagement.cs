@@ -9,8 +9,8 @@ namespace Interface
 { 
      internal interface ICustomerManagement
     {
-        Task<ShoppingCart> AddShoppingCart(ShoppingCart cart);
-        Task<int> DeleteShoppingCart(ShoppingCart cart);
+        Task AddOrder(Order order);
+        Task<int> DeleteOrder(Order order);
         //tìm sản phẩm đã từng mua
         Task<int> FindProduct(int productId,List<product> items);
         Task<List<product>> GetAllProducts();
