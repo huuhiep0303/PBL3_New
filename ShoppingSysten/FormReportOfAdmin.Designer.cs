@@ -827,5 +827,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
+<<<<<<< Updated upstream
+=======
+        private System.Windows.Forms.DataGridViewTextBoxColumn namee;
+>>>>>>> Stashed changes
     }
 }
