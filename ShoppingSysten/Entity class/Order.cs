@@ -12,7 +12,7 @@ namespace ShoppingSysten.Entity_class
         public int OrderId { get; set; }
         public List<OrderItem> Items { get; set; } = new List<OrderItem>();
         public DateTime OrderDate { get; set; }
-        public int CustomerId { get; set; }
+        public int CustomerId { get; set; } 
         public Status status { get; set; }
         public decimal OrderTotal => Items.Sum(p => p.Total);
         public Order() { }
