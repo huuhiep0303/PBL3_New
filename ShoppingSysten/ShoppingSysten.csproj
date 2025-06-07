@@ -92,6 +92,12 @@
     <Compile Include="Entity class\ShoppingCart.cs" />
     <Compile Include="Entity class\ShoppingCartItem.cs" />
     <Compile Include="Entity class\StoreManage.cs" />
+    <Compile Include="FormChitietdonhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChitietdonhang.Designer.cs">
+      <DependentUpon>FormChitietdonhang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCustomerOfAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     <Compile Include="Interface\IStoreManagement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormChitietdonhang.resx">
+      <DependentUpon>FormChitietdonhang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCustomerOfAdmin.resx">
       <DependentUpon>FormCustomerOfAdmin.cs</DependentUpon>
     </EmbeddedResource>
