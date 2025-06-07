@@ -9,7 +9,7 @@ namespace Entity_class
 		public int inventoryId { get; set; }
 		public int Quantity { get; set; }
 		public decimal ReorderLevel { get; set; }
-		public Location Location { get; set; }
+		public string Location { get; set; }
 		public DateTime lastUpdate { get; set; }
         public Inventory()
         {
