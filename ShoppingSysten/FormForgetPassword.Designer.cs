@@ -1,4 +1,5 @@
-﻿namespace ShoppingSysten
+﻿using Guna.UI2.WinForms;
+namespace ShoppingSysten
 {
     partial class FormForgetPassword
     {
@@ -29,7 +30,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();    
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();

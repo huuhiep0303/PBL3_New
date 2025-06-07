@@ -291,6 +291,7 @@
             this.label16.Size = new System.Drawing.Size(154, 19);
             this.label16.TabIndex = 2;
             this.label16.Text = "+8% so với tháng trước";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label17
             // 

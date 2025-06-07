@@ -93,12 +93,12 @@
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
-            this.guna2TextBox1.Location = new System.Drawing.Point(298, 14);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.guna2TextBox1.Location = new System.Drawing.Point(224, 11);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PlaceholderText = "Tìm kiếm...";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(528, 51);
+            this.guna2TextBox1.Size = new System.Drawing.Size(396, 41);
             this.guna2TextBox1.TabIndex = 3;
             // 
             // button2
@@ -108,9 +108,10 @@
             this.button2.Dock = System.Windows.Forms.DockStyle.Right;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1442, 0);
+            this.button2.Location = new System.Drawing.Point(964, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 76);
+            this.button2.Size = new System.Drawing.Size(30, 62);
             this.button2.TabIndex = 2;
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -121,9 +122,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(1482, 0);
+            this.button1.Location = new System.Drawing.Point(994, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 76);
+            this.button1.Size = new System.Drawing.Size(34, 62);
             this.button1.TabIndex = 1;
             this.button1.Text = "AD";
             this.button1.UseVisualStyleBackColor = true;
@@ -132,10 +134,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(24, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 32);
+            this.label1.Size = new System.Drawing.Size(167, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hệ thống quản lý";
             // 
@@ -146,9 +147,10 @@
             this.panel7.Controls.Add(this.label14);
             this.panel7.Controls.Add(this.button15);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 688);
+            this.panel7.Location = new System.Drawing.Point(0, 473);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(277, 91);
+            this.panel7.Size = new System.Drawing.Size(208, 74);
             this.panel7.TabIndex = 17;
             // 
             // button16
@@ -157,9 +159,10 @@
             this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button16.FlatAppearance.BorderSize = 0;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Location = new System.Drawing.Point(237, 14);
+            this.button16.Location = new System.Drawing.Point(178, 11);
+            this.button16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(28, 34);
+            this.button16.Size = new System.Drawing.Size(21, 28);
             this.button16.TabIndex = 18;
             this.button16.UseVisualStyleBackColor = true;
             // 
@@ -167,9 +170,10 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(67, 45);
+            this.label15.Location = new System.Drawing.Point(50, 37);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(177, 28);
+            this.label15.Size = new System.Drawing.Size(141, 21);
             this.label15.TabIndex = 6;
             this.label15.Text = "admin@gmail.com";
             // 
@@ -177,9 +181,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(66, 17);
+            this.label14.Location = new System.Drawing.Point(50, 14);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 28);
+            this.label14.Size = new System.Drawing.Size(56, 21);
             this.label14.TabIndex = 5;
             this.label14.Text = "Admin";
             // 
@@ -188,9 +193,10 @@
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button15.Location = new System.Drawing.Point(12, 36);
+            this.button15.Location = new System.Drawing.Point(9, 29);
+            this.button15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(46, 32);
+            this.button15.Size = new System.Drawing.Size(34, 26);
             this.button15.TabIndex = 4;
             this.button15.Text = "AD";
             this.button15.UseVisualStyleBackColor = true;
@@ -216,10 +222,10 @@
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 76);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.panel2.Location = new System.Drawing.Point(0, 62);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(277, 779);
+            this.panel2.Size = new System.Drawing.Size(208, 547);
             this.panel2.TabIndex = 12;
             // 
             // button22
@@ -278,20 +284,49 @@
             this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(25, 304);
+            this.button12.Location = new System.Drawing.Point(19, 247);
+            this.button12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(42, 34);
+            this.button12.Size = new System.Drawing.Size(32, 28);
             this.button12.TabIndex = 16;
             this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(62, 292);
+            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(122, 35);
+            this.button13.TabIndex = 15;
+            this.button13.Text = "Báo cáo";
+            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button14.BackgroundImage")));
+            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Location = new System.Drawing.Point(19, 292);
+            this.button14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(38, 35);
+            this.button14.TabIndex = 14;
+            this.button14.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(82, 300);
+            this.button11.Location = new System.Drawing.Point(62, 244);
+            this.button11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(162, 43);
+            this.button11.Size = new System.Drawing.Size(122, 35);
             this.button11.TabIndex = 13;
             this.button11.Text = "Nhân viên";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -302,9 +337,10 @@
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(82, 240);
+            this.button9.Location = new System.Drawing.Point(62, 195);
+            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(162, 43);
+            this.button9.Size = new System.Drawing.Size(122, 35);
             this.button9.TabIndex = 11;
             this.button9.Text = "Khách hàng";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -316,9 +352,10 @@
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(25, 242);
+            this.button10.Location = new System.Drawing.Point(19, 197);
+            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(42, 34);
+            this.button10.Size = new System.Drawing.Size(32, 28);
             this.button10.TabIndex = 10;
             this.button10.UseVisualStyleBackColor = true;
             // 
@@ -327,9 +364,10 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(82, 172);
+            this.button7.Location = new System.Drawing.Point(62, 140);
+            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(162, 43);
+            this.button7.Size = new System.Drawing.Size(122, 35);
             this.button7.TabIndex = 9;
             this.button7.Text = "Đơn hàng";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -341,9 +379,10 @@
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(25, 178);
+            this.button8.Location = new System.Drawing.Point(19, 145);
+            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(42, 33);
+            this.button8.Size = new System.Drawing.Size(32, 27);
             this.button8.TabIndex = 8;
             this.button8.UseVisualStyleBackColor = true;
             // 
@@ -352,9 +391,10 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(82, 103);
+            this.button5.Location = new System.Drawing.Point(62, 84);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(162, 43);
+            this.button5.Size = new System.Drawing.Size(122, 35);
             this.button5.TabIndex = 7;
             this.button5.Text = "Sản phẩm";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -366,9 +406,10 @@
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(25, 108);
+            this.button6.Location = new System.Drawing.Point(19, 88);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(42, 32);
+            this.button6.Size = new System.Drawing.Size(32, 26);
             this.button6.TabIndex = 6;
             this.button6.UseVisualStyleBackColor = true;
             // 
@@ -377,9 +418,10 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(82, 40);
+            this.button4.Location = new System.Drawing.Point(62, 32);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(162, 43);
+            this.button4.Size = new System.Drawing.Size(122, 35);
             this.button4.TabIndex = 5;
             this.button4.Text = "Tổng quan";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -391,9 +433,10 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(25, 47);
+            this.button3.Location = new System.Drawing.Point(19, 38);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(42, 29);
+            this.button3.Size = new System.Drawing.Size(32, 24);
             this.button3.TabIndex = 4;
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -406,9 +449,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1528, 76);
+            this.panel1.Size = new System.Drawing.Size(1028, 62);
             this.panel1.TabIndex = 11;
             // 
             // panel3
@@ -423,10 +466,38 @@
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.guna2TextBox2);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(317, 103);
+            this.panel3.Location = new System.Drawing.Point(238, 84);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1165, 696);
+            this.panel3.Size = new System.Drawing.Size(874, 566);
             this.panel3.TabIndex = 26;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // button21
+            // 
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.Location = new System.Drawing.Point(812, 69);
+            this.button21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(49, 40);
+            this.button21.TabIndex = 9;
+            this.button21.Text = "OK";
+            this.button21.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Sắp xếp theo ID",
+            "Sắp xếp theo tên",
+            "Sắp xếp theo giá",
+            "Sắp xếp theo số lượng còn lại"});
+            this.comboBox1.Location = new System.Drawing.Point(681, 80);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(108, 21);
+            this.comboBox1.TabIndex = 8;
             // 
             // button21
             // 
@@ -456,9 +527,10 @@
             // 
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(793, 81);
+            this.button20.Location = new System.Drawing.Point(595, 66);
+            this.button20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(109, 53);
+            this.button20.Size = new System.Drawing.Size(82, 43);
             this.button20.TabIndex = 6;
             this.button20.Text = "Xóa tất cả";
             this.button20.UseVisualStyleBackColor = true;
@@ -467,9 +539,10 @@
             // 
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.Location = new System.Drawing.Point(666, 81);
+            this.button19.Location = new System.Drawing.Point(500, 66);
+            this.button19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(109, 53);
+            this.button19.Size = new System.Drawing.Size(82, 43);
             this.button19.TabIndex = 5;
             this.button19.Text = "Sửa sản phẩm";
             this.button19.UseVisualStyleBackColor = true;
@@ -478,9 +551,10 @@
             // 
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.Location = new System.Drawing.Point(540, 81);
+            this.button18.Location = new System.Drawing.Point(405, 66);
+            this.button18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(109, 53);
+            this.button18.Size = new System.Drawing.Size(82, 43);
             this.button18.TabIndex = 4;
             this.button18.Text = "Xóa sản phẩm";
             this.button18.UseVisualStyleBackColor = true;
@@ -489,9 +563,10 @@
             // 
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(413, 81);
+            this.button17.Location = new System.Drawing.Point(310, 66);
+            this.button17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(109, 53);
+            this.button17.Size = new System.Drawing.Size(82, 43);
             this.button17.TabIndex = 3;
             this.button17.Text = "Thêm sản phẩm";
             this.button17.UseVisualStyleBackColor = true;
@@ -508,13 +583,15 @@
             this.phone,
             this.work_status,
             this.salary});
-            this.dataGridView1.Location = new System.Drawing.Point(67, 160);
+            this.dataGridView1.Location = new System.Drawing.Point(50, 130);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1021, 496);
+            this.dataGridView1.Size = new System.Drawing.Size(766, 403);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ID
             // 
@@ -571,21 +648,22 @@
             this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox2.IconLeft")));
-            this.guna2TextBox2.Location = new System.Drawing.Point(67, 78);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.guna2TextBox2.Location = new System.Drawing.Point(50, 63);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PlaceholderText = "Tìm kiếm...";
             this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(332, 56);
+            this.guna2TextBox2.Size = new System.Drawing.Size(249, 46);
             this.guna2TextBox2.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(61, 27);
+            this.label2.Location = new System.Drawing.Point(46, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(254, 32);
+            this.label2.Size = new System.Drawing.Size(202, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Danh sách sản phẩm";
             // 
@@ -616,12 +694,13 @@
             // 
             // FormProductOfAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1528, 855);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormProductOfAdmin";
             this.Text = "FormProduct";
             this.panel7.ResumeLayout(false);

@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>ARM64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -32,11 +32,16 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
@@ -52,11 +57,124 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\AdminManagement.cs" />
+    <Compile Include="BLL\CashierManagement.cs" />
+    <Compile Include="BLL\categoryManagement.cs" />
+    <Compile Include="BLL\CustomerManagement.cs" />
+    <Compile Include="BLL\InventoryHistoryManagement.cs" />
+    <Compile Include="BLL\InventoryManagement.cs" />
+    <Compile Include="BLL\OrderManagement.cs" />
+    <Compile Include="BLL\PaymentMangement.cs" />
+    <Compile Include="BLL\productManegement.cs" />
+    <Compile Include="BLL\RequestManagement.cs" />
+    <Compile Include="BLL\StoreManagement.cs" />
+    <Compile Include="customer\UC_Danhgia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="customer\UC_Danhgia.Designer.cs">
+      <DependentUpon>UC_Danhgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer\UC_Donhang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="customer\UC_Donhang.Designer.cs">
+      <DependentUpon>UC_Donhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer\UC_Lichsudonhang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="customer\UC_Lichsudonhang.Designer.cs">
+      <DependentUpon>UC_Lichsudonhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer\UC_Sanpham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="customer\UC_Sanpham.Designer.cs">
+      <DependentUpon>UC_Sanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer\UC_Thongtincanhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="customer\UC_Thongtincanhan.Designer.cs">
+      <DependentUpon>UC_Thongtincanhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\CategoryDAO.cs" />
+    <Compile Include="DAO\CustomerDAO.cs" />
+    <Compile Include="DAO\EmployeeDAO.cs" />
+    <Compile Include="DAO\InventoryDAO.cs" />
+    <Compile Include="DAO\InventoryHisDAO.cs" />
+    <Compile Include="DAO\OrderDAO.cs" />
+    <Compile Include="DAO\ProductDAO.cs" />
+    <Compile Include="DAO\RequestDAO.cs" />
+    <Compile Include="employee\UC_Banhang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee\UC_Banhang.Designer.cs">
+      <DependentUpon>UC_Banhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee\UC_Hoadon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee\UC_Hoadon.Designer.cs">
+      <DependentUpon>UC_Hoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee\UC_Nhacungcap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee\UC_Nhacungcap.Designer.cs">
+      <DependentUpon>UC_Nhacungcap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee\UC_Quanlykho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee\UC_Quanlykho.Designer.cs">
+      <DependentUpon>UC_Quanlykho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee\UC_Sanpham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee\UC_Sanpham.Designer.cs">
+      <DependentUpon>UC_Sanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee\UC_Thongke.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee\UC_Thongke.Designer.cs">
+      <DependentUpon>UC_Thongke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity class\Cashier.cs" />
+    <Compile Include="Entity class\category.cs" />
+    <Compile Include="Entity class\Customer.cs" />
+    <Compile Include="Entity class\Employee.cs" />
+    <Compile Include="Entity class\humanFeature.cs" />
+    <Compile Include="Entity class\Inventory.cs" />
+    <Compile Include="Entity class\InventoryTransaction.cs" />
+    <Compile Include="Entity class\Admin.cs" />
+    <Compile Include="Entity class\Order.cs" />
+    <Compile Include="Entity class\OrderItem.cs" />
+    <Compile Include="Entity class\Payment.cs" />
+    <Compile Include="Entity class\product.cs" />
+    <Compile Include="Entity class\ReturnRequest.cs" />
+    <Compile Include="Entity class\ShoppingCart.cs" />
+    <Compile Include="Entity class\ShoppingCartItem.cs" />
+    <Compile Include="Entity class\StoreManage.cs" />
+    <Compile Include="Formcustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formcustomer.Designer.cs">
+      <DependentUpon>Formcustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCustomerOfAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCustomerOfAdmin.Designer.cs">
       <DependentUpon>FormCustomerOfAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formemployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formemployee.Designer.cs">
+      <DependentUpon>formemployee.cs</DependentUpon>
     </Compile>
     <Compile Include="FormForgetPassword.cs">
       <SubType>Form</SubType>
@@ -126,8 +244,47 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="customer\UC_Danhgia.resx">
+      <DependentUpon>UC_Danhgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer\UC_Donhang.resx">
+      <DependentUpon>UC_Donhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer\UC_Lichsudonhang.resx">
+      <DependentUpon>UC_Lichsudonhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer\UC_Sanpham.resx">
+      <DependentUpon>UC_Sanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer\UC_Thongtincanhan.resx">
+      <DependentUpon>UC_Thongtincanhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee\UC_Banhang.resx">
+      <DependentUpon>UC_Banhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee\UC_Hoadon.resx">
+      <DependentUpon>UC_Hoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee\UC_Nhacungcap.resx">
+      <DependentUpon>UC_Nhacungcap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee\UC_Quanlykho.resx">
+      <DependentUpon>UC_Quanlykho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee\UC_Sanpham.resx">
+      <DependentUpon>UC_Sanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee\UC_Thongke.resx">
+      <DependentUpon>UC_Thongke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formcustomer.resx">
+      <DependentUpon>Formcustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCustomerOfAdmin.resx">
       <DependentUpon>FormCustomerOfAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formemployee.resx">
+      <DependentUpon>formemployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormForgetPassword.resx">
       <DependentUpon>FormForgetPassword.cs</DependentUpon>
@@ -185,5 +342,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
