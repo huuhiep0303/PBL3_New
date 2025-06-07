@@ -26,5 +26,15 @@ namespace ShoppingSysten
         {
 
         }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormProductOfAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

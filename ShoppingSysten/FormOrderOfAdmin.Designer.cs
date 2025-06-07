@@ -67,7 +67,7 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.button17 = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
@@ -163,7 +163,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.Name,
+            this.name,
             this.gender,
             this.salary});
             this.dataGridView1.Location = new System.Drawing.Point(67, 160);
@@ -611,9 +611,9 @@
             // 
             // Name
             // 
-            this.Name.HeaderText = "Khách hàng";
-            this.Name.MinimumWidth = 6;
-            this.Name.Name = "Name";
+            this.name.HeaderText = "Khách hàng";
+            this.name.MinimumWidth = 6;
+            this.name.Name = "Name";
             // 
             // gender
             // 
@@ -692,7 +692,7 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn salary;
     }
