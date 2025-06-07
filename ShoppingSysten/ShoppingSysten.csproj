@@ -164,6 +164,24 @@
     <Compile Include="FormThuNgan.Designer.cs">
       <DependentUpon>FormThuNgan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IAdminManagement.cs" />
+    <Compile Include="Interface\ICashierManagement.cs" />
+    <Compile Include="Interface\ICategoryDAO.cs" />
+    <Compile Include="Interface\ICategoryManagement.cs" />
+    <Compile Include="Interface\ICustomerDAO.cs" />
+    <Compile Include="Interface\ICustomerManagement.cs" />
+    <Compile Include="Interface\IEmployeeDAO.cs" />
+    <Compile Include="Interface\IHistoryDAO.cs" />
+    <Compile Include="Interface\IInventoryDAO.cs" />
+    <Compile Include="Interface\IInventoryHistory.cs" />
+    <Compile Include="Interface\IInventoryManagement.cs" />
+    <Compile Include="Interface\IOrderDAO.cs" />
+    <Compile Include="Interface\IOrderManagement.cs" />
+    <Compile Include="Interface\IPaymentManagement.cs" />
+    <Compile Include="Interface\IProductDAO.cs" />
+    <Compile Include="Interface\IProductManagement.cs" />
+    <Compile Include="Interface\IRequestManagement.cs" />
+    <Compile Include="Interface\IStoreManagement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCustomerOfAdmin.resx">
