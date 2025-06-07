@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Entity_class
 {
     class Employee : human
     {
-        public int EmployeeId;
+        [Key] public int customerId { get; set; }
         public virtual string Role { set; get; }
         public string WorkPlace { get; set; }
         public int Shift {  get; set; }
