@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\AdminManagement.cs" />
     <Compile Include="BLL\CashierManagement.cs" />
     <Compile Include="BLL\categoryManagement.cs" />
     <Compile Include="BLL\CustomerManagement.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="BLL\PaymentMangement.cs" />
     <Compile Include="BLL\productManegement.cs" />
     <Compile Include="BLL\RequestManagement.cs" />
+    <Compile Include="BLL\StoreManagement.cs" />
     <Compile Include="customer\UC_Danhgia.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -222,6 +224,7 @@
     <Compile Include="FormSignup.Designer.cs">
       <DependentUpon>FormSignup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IAdminManagement.cs" />
     <Compile Include="Interface\ICashierManagement.cs" />
     <Compile Include="Interface\IEmployeeDAO.cs" />
     <Compile Include="Interface\ICategoryDAO.cs" />
@@ -238,6 +241,7 @@
     <Compile Include="Interface\IProductDAO.cs" />
     <Compile Include="Interface\IProductManagement.cs" />
     <Compile Include="Interface\IRequestManagement.cs" />
+    <Compile Include="Interface\IStoreManagement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="customer\UC_Danhgia.resx">

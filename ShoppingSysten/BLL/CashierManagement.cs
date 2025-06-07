@@ -36,28 +36,27 @@ namespace BLL
         }
 
         // Thêm đơn hàng cho khách
-        public async Task<Order> AddOrderForCustomer(Order order, int customerId)
+        public async Task AddOrderForCustomer(Order order, int customerId)
         {
             order.CustomerId = customerId;
             order.OrderDate = DateTime.Now;
             order.status = Status.Pending; // hoặc giá trị mặc định khác
 
-            var insertedOrder = await _orderDAO.InsertOrder(order);
-            return insertedOrder;
+             await _orderDAO.InsertOrder(order);
         }
 
         // Cập nhật đơn hàng
         public async Task<Order> Update(int customerId, Order order)
         {
             order.CustomerId = customerId;
-            var updated = await _orderDAO.UpdateOrderAsync(order);
-            return updated;
+            await _orderDAO.InsertOrder(order);
+            return order;
         }
 
         // Xoá đơn hàng
         public async Task<Order> DeleteOrder(int customerId, Order order)
         {
-            await _orderDAO.DeleteOrderAsync(order.OrderId);
+            await _orderDAO.DeleteOrder(order.OrderId);
             return order;
         }
     }

@@ -12,7 +12,7 @@ namespace Interface
         Task<List<Order>> GetAllOrders();
         Task<Order> GetOrderByOrderID(int orderID);
         Task<Order> GetOrderByIdCustomer(int customerId);
-        Task<Order> AddOrderForCustomer(Order order, int customerId);
+        Task AddOrderForCustomer(Order order, int customerId);
         Task<Order> DeleteOrder(int customerId, Order order);
         Task<Order> Update(int customerId, Order order);
     }
