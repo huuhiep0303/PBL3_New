@@ -848,6 +848,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+<<<<<<< Updated upstream
         private System.Windows.Forms.DataGridViewTextBoxColumn Ten;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
@@ -855,5 +856,8 @@
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
+=======
+        private System.Windows.Forms.DataGridViewTextBoxColumn namee;
+>>>>>>> Stashed changes
     }
 }

@@ -677,9 +677,15 @@
             // 
             // Name
             // 
+<<<<<<< Updated upstream
             this.Namee.HeaderText = "Tên khách hàng";
             this.Namee.MinimumWidth = 6;
             this.Namee.Name = "Name";
+=======
+            this.NameAdmin.HeaderText = "Tên khách hàng";
+            this.NameAdmin.MinimumWidth = 6;
+            this.NameAdmin.Name = "Name";
+>>>>>>> Stashed changes
             // 
             // position
             // 
@@ -846,10 +852,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn position;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+<<<<<<< Updated upstream
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.DataGridViewTextBoxColumn Namee;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
+=======
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameAdmin;
+>>>>>>> Stashed changes
     }
 }
